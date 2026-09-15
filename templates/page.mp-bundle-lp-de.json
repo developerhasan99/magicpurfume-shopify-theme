@@ -414,6 +414,7 @@
         "tile-1": {
           "type": "tile",
           "settings": {
+            "video": "shopify://files/videos/VID-20250403-WA0000.mp4",
             "video_url": "",
             "caption": "Kundenvideo",
             "soon_label": "Video folgt in Kürze",
