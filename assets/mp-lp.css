@@ -8,6 +8,8 @@
 .mp-lp a:not(.mp-btn){color:inherit}
 .mp-lp section{scroll-margin-top:80px}
 .mp-lp button{font:inherit;cursor:pointer}
+.mp-lp .mp-seg-row button:first-child{border-top-left-radius: 22px; border-bottom-left-radius: 22px;}
+.mp-lp .mp-seg-row button:last-child{border-top-right-radius: 22px; border-bottom-right-radius: 22px;}
 .mp-lp h1,.mp-lp h2,.mp-lp h3,.mp-lp .mp-head{font-family:var(--mp-font-head);color:var(--mp-ink);line-height:1.12;letter-spacing:-0.4px}
 .mp-lp h1{text-wrap:balance}
 .mp-lp h2{font-size:26px;font-weight:800;text-wrap:balance}
