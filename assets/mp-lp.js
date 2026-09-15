@@ -512,7 +512,7 @@
     for (var i = 0; i < MAX; i++) {
       var p = state.selected[i];
       html += p ? '<div class="mp-slot mp-slot--filled"><img src="' + esc(withWidth(p.image, 200)) + '" width="100" height="100" alt="' + esc(T.cardAlt(p.number)) + '"><button class="mp-slot__rm" type="button" data-rm="' + p.id + '" aria-label="' + esc(T.removeChip(p.name)) + '">&times;</button></div>'
-                 : '<div class="mp-slot" aria-label="' + esc(T.emptySlot) + '">' + (i + 1) + '</div>';
+                 : '<button class="mp-slot" type="button" data-slot-open aria-label="' + esc(T.emptySlot) + '">' + (i + 1) + '</button>';
     }
     el.slots.innerHTML = html;
     if (el.counter) el.counter.textContent = n >= MAX ? T.full : T.chooseMore(MAX - n);
@@ -635,6 +635,7 @@
   }
   document.addEventListener('click', function(e){
     if (!e.target.closest || !e.target.closest('.mp-lp')) return;
+    if (e.target.closest('[data-slot-open]')) { var filters = q('.mp-picker__filters'); if (filters && filters.scrollIntoView) filters.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
     if (e.target.closest('[data-search-clear]')) { clearSearch(); return; }
     if (e.target.closest('[data-search-all]')) { state.gender = 'all'; qa('[data-gender]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-gender') === 'all')); }); renderTiles(); setTab('all'); return; }
     var t = e.target.closest('[data-toggle]'); if (t) { toggle(parseInt(t.getAttribute('data-toggle'), 10)); return; }
