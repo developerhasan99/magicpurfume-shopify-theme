@@ -281,7 +281,7 @@
 #mp-ugc.mp-section{padding-bottom:16px}
 .mp-ugc__row::-webkit-scrollbar{display:none}
 .mp-ugc__tile{flex:0 0 220px;aspect-ratio:9/16;border-radius:18px;background:linear-gradient(160deg,#E7DDCB,#CDB99A);position:relative;scroll-snap-align:start;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:var(--mp-shadow)}
-.mp-ugc__tile video{width:100%;height:100%;object-fit:cover;display:none}
+.mp-ugc__tile video{width:100%;height:100%;object-fit:cover;}
 .mp-ugc__tile[data-ugc-src] video{display:block}
 .mp-ugc__play{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:var(--mp-ink);border:0;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 .mp-ugc__play svg{width:22px;height:22px;margin-left:3px}
