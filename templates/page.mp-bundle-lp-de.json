@@ -30,7 +30,7 @@
         "tag_new": "new",
         "family_prefix": "family:",
         "brand_prefix": "marke:",
-        "after_add": "drawer",
+        "after_add": "checkout",
         "gift_wait_ms": 2500,
         "item_label": "Flasche",
         "item_text": "{name} Inspiriert von {inspiration} - 50ml",
