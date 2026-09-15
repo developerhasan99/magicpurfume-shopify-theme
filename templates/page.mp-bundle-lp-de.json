@@ -12,7 +12,7 @@
     "core": {
       "type": "mp-lp-core",
       "settings": {
-        "bundle_handle": "6-x-50ml-parfumflaschen-5999",
+        "bundle_handle": "6-x-50ml-parfumflaschen",
         "order_collection": "best-sellers",
         "fill_collection": "all",
         "bundle_size": 6,
