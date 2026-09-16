@@ -237,11 +237,6 @@
         "disabled": false,
         "settings": {}
       },
-      "11349500561483629931": {
-        "type": "shopify://apps/notify-back-in-stock-preorder/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
-        "disabled": false,
-        "settings": {}
-      },
       "12995158295224700252": {
         "type": "shopify://apps/insureful/blocks/app-embed/9d68bce0-511b-458e-a75c-59b30247783c",
         "disabled": false,
@@ -282,6 +277,11 @@
       "2441077020710769822": {
         "type": "shopify://apps/aimerce-first-party-pixel/blocks/c-track-embed/51cbda5a-dbfc-4e7b-8d12-c9e90363dcd7",
         "disabled": false,
+        "settings": {}
+      },
+      "11349500561483629931": {
+        "type": "shopify://apps/notify-me/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
+        "disabled": true,
         "settings": {}
       }
     },
