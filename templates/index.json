@@ -426,6 +426,7 @@
         },
         "review_UPwGBF": {
           "type": "review",
+          "disabled": true,
           "settings": {
             "review_image": "shopify://shop_images/WhatsApp_Image_2026-09-09_at_8.35.36_AM_1.jpg",
             "content": "<p>„Ehrlich, einer der besten Düfte, die ich seit Jahren gerochen habe. Die Noten sind einfach brutal gut. Der bleibt definitiv dauerhaft in meiner Sammlung.“</p>",
