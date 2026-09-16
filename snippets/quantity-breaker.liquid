@@ -26,6 +26,12 @@
   [x-cloak] {
     display: none !important;
   }
+
+  {% comment %} .button.loading only fades inherited text color; this badge sets its
+     own background/text color so it needs to be hidden explicitly while loading {% endcomment %}
+  .atc-button.loading > *:not(.loading__spinner) {
+    visibility: hidden;
+  }
 </style>
 
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -202,11 +208,17 @@
     </template>
   </div>
 
-  {% comment %} Add to cart form {% endcomment %}
+  {% comment %} Add to cart form — real product-form component; bundle items are
+     submitted as items[0..n] hidden inputs kept in sync by Alpine {% endcomment %}
   <product-form
+    @submit.capture="$store.qb.prepareSubmit($event)"
     class="product-form !mb-0 block"
     data-hide-errors="{{ gift_card_recipient_feature_active }}"
     data-section-id="{{ section.id }}">
+    <div class="product-form__error-message-wrapper" role="alert" hidden>
+      <span class="product-form__error-message"></span>
+    </div>
+
     {%- form 'product'
       , product
       , id: product_form_id
@@ -214,6 +226,8 @@
       , novalidate: 'novalidate'
       , data-type: 'add-to-cart-form'
     -%}
+      {% comment %} Required by product-form.js's constructor (looks up [name=id]);
+         disabled right before submit so it doesn't collide with items[0] below {% endcomment %}
       <input
         type="hidden"
         name="id"
@@ -221,20 +235,35 @@
         value="{{ selected_variant.id }}"
         :value="$store.qb.selectedVariantId"
         class="product-variant-id">
+
+      {% comment %} slot 0 — the pre-selected current product {% endcomment %}
+      <input type="hidden" name="items[0][id]" :value="$store.qb.selectedVariantId">
+      <input type="hidden" name="items[0][quantity]" value="1">
+
+      {% comment %} slots 1..n — customer-chosen bonus fragrances {% endcomment %}
+      <template x-for="(p, idx) in $store.qb.selectedProducts.slice(0, $store.qb.bundleLength)" :key="p.id">
+        <span>
+          <input type="hidden" :name="'items[' + (idx + 1) + '][id]'" :value="p.variant.id">
+          <input type="hidden" :name="'items[' + (idx + 1) + '][quantity]'" value="1">
+          <input type="hidden" :name="'items[' + (idx + 1) + '][properties][Paket-Duft]'" :value="p.name">
+        </span>
+      </template>
+
       <button
-        type="button"
-        @click="$store.qb.doATC()"
-        :disabled="$store.qb.addingToCart || !$store.qb.isComplete"
-        :class="(!$store.qb.isComplete || $store.qb.addingToCart) ? 'opacity-60 cursor-not-allowed' : ''"
+        type="submit"
+        name="add"
+        value="1"
+        :aria-disabled="!$store.qb.isComplete"
+        :class="!$store.qb.isComplete ? 'opacity-60 cursor-not-allowed' : ''"
         class="atc-button shimmer-btn cta_product_from_submit_btn flex gap-x-2 flex-wrap items-center justify-center !mb-0 text-2xl !p-3 rounded-lg button hover:bg-[#17803d] bg-[#146b32] transition-colors shadow-xl tracking-normal button--full-width button--primary"
         aria-label="Add to cart">
         <span
-          x-show="!$store.qb.isComplete && !$store.qb.addingToCart"
+          x-show="!$store.qb.isComplete"
           x-cloak
           x-text="'Wähle noch ' + $store.qb.remaining + ($store.qb.remaining === 1 ? ' Duft' : ' Düfte')"></span>
 
-        <span x-show="$store.qb.isComplete && !$store.qb.addingToCart">{{ 'products.product.add_to_cart' | t }}</span>
-        <div class="flex items-center" x-show="$store.qb.isComplete && !$store.qb.addingToCart">
+        <span x-show="$store.qb.isComplete">{{ 'products.product.add_to_cart' | t }}</span>
+        <div class="flex items-center" x-show="$store.qb.isComplete">
           <div
             class="inline-block text-lg bg-[#0c5224] px-3 rounded"
             id="product-price"
@@ -245,13 +274,7 @@
           </div>
         </div>
 
-        <span
-          x-show="$store.qb.addingToCart"
-          x-cloak
-          class="inline-flex items-center gap-x-2 [&_.path]:stroke-white">
-          {%- render 'loading-spinner', class: 'w-7 inline-block' -%}
-          <span>Wird hinzugefügt …</span>
-        </span>
+        {%- render 'loading-spinner' -%}
       </button>
     {%- endform -%}
   </product-form>
@@ -412,8 +435,6 @@
       showModal: false,
       activeCategory: 'All',
       searchText: '',
-      addingToCart: false,
-      _atcTimer: null,
       selectedProducts: [],
 
       mainProduct: {
@@ -529,48 +550,20 @@
         });
       },
 
-      doATC: function () {
-        if (this.addingToCart || !this.isComplete) return;
-        this.addingToCart = true;
-
-        {% comment %} Safety net: re-enable the button if the checkout redirect is
-           blocked or the customer comes back from checkout via the back button {% endcomment %}
-        var self = this;
-        clearTimeout(this._atcTimer);
-        this._atcTimer = setTimeout(function () { self.addingToCart = false; }, 12000);
-
-        {% comment %} 1 line for the pre-selected current product + 1 line per chosen bottle {% endcomment %}
-        var items = [{ id: this.selectedVariantId, quantity: 1 }];
-        this.selectedProducts.slice(0, this.bundleLength).forEach(function (p) {
-          items.push({
-            id: Number(p.variant.id),
-            quantity: 1,
-            properties: { 'Paket-Duft': p.name }
-          });
-        });
-
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ items: items })
-        })
-          .then(function (res) {
-            if (!res.ok) throw new Error('Add to cart failed');
-            return res.json();
-          })
-          .then(function () { window.location.href = '/checkout'; })
-          .catch(function (err) {
-            console.error(err);
-            clearTimeout(self._atcTimer);
-            self.addingToCart = false;
-          });
+      {% comment %} Runs on the submit event's capture phase, before product-form.js's
+         own submit handler on the inner <form>: blocks the submit while the bundle
+         isn't complete, and clears the legacy "id" field so it can't collide with
+         "items[0][id]" (both would otherwise be sent to /cart/add.js) {% endcomment %}
+      prepareSubmit: function (evt) {
+        if (!this.isComplete) {
+          evt.preventDefault();
+          evt.stopPropagation();
+          this.openModal();
+          return;
+        }
+        var idInput = evt.target.querySelector('[name="id"]');
+        if (idInput) idInput.disabled = true;
       }
-    });
-
-    {% comment %} Reset the loading state when the page is restored from the
-       back/forward cache (e.g. customer returns from the checkout page) {% endcomment %}
-    window.addEventListener('pageshow', function (e) {
-      if (e.persisted && Alpine.store('qb')) Alpine.store('qb').addingToCart = false;
     });
   });
 </script>
