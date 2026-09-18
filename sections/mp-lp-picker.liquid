@@ -34,9 +34,11 @@
             <div class="mp-progress__track"><div class="mp-progress__fill" data-progress-fill></div><span class="mp-progress__mark" style="left:100%" data-mark="6"></span></div>
             <div class="mp-progress__txt"><span data-progress-label>0 of 6 picked</span><span data-progress-next>Both unlock with the full box</span></div>
           </div>
-          <ul class="mp-bonus">
+          <ul class="mp-bonus{% unless section.settings.show_bonus_mystery %} mp-bonus--single{% endunless %}">
             <li class="mp-bonus__tile" data-bonus="ship" data-unlock="6"><span class="mp-bonus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></span><span class="mp-bonus__txt"><b>{{ section.settings.bonus_ship_title | escape }}</b><span class="mp-bonus__state" data-bonus-state>Unlocks with the full box</span></span><span class="mp-bonus__badge" aria-hidden="true"><svg class="mp-bonus__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><svg class="mp-bonus__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></li>
+            {%- if section.settings.show_bonus_mystery -%}
             <li class="mp-bonus__tile" data-bonus="mystery" data-unlock="6"><span class="mp-bonus__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16v11H4zM2 6h20v4H2zM12 6v15M12 6c-2-4-7-3-6 0M12 6c2-4 7-3 6 0"/></svg></span><span class="mp-bonus__txt"><b>{{ section.settings.bonus_mystery_title | escape }}</b><span class="mp-bonus__state" data-bonus-state>Unlocks with the full box</span></span><span class="mp-bonus__badge" aria-hidden="true"><svg class="mp-bonus__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><svg class="mp-bonus__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></li>
+            {%- endif -%}
           </ul>
           <div class="mp-price">
             <div class="mp-price__line">{{ section.settings.price_line | escape }}</div>
@@ -93,6 +95,7 @@
     { "type": "text", "id": "tray_heading", "label": "Tray heading", "default": "Your box" },
     { "type": "text", "id": "tray_empty", "label": "Tray empty message", "default": "Six empty slots. Pick your first bottle below." },
     { "type": "text", "id": "bonus_ship_title", "label": "Bonus tile: shipping title", "default": "Free shipping" },
+    { "type": "checkbox", "id": "show_bonus_mystery", "label": "Show mystery scent bonus tile", "default": true, "info": "Turn off to show only the free shipping tile, full width." },
     { "type": "text", "id": "bonus_mystery_title", "label": "Bonus tile: mystery scent title", "default": "Mystery 50 ml scent" },
     { "type": "text", "id": "price_line", "label": "Price line", "default": "6 x 50 ml Eau de Parfum" },
     { "type": "text", "id": "price_per", "label": "Price per bottle line", "default": "{per} per bottle", "info": "Tokens: {per}" },

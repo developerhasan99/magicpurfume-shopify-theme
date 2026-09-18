@@ -406,6 +406,7 @@
 .mp-progress__txt{display:flex;justify-content:space-between;gap:10px;margin-top:8px;font-size:11.5px;color:var(--mp-muted)}
 .mp-progress__txt span:first-child{font-weight:700;color:var(--mp-ink)}
 .mp-lp .mp-bonus{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mp-lp .mp-bonus--single{grid-template-columns:1fr}
 .mp-bonus__tile{position:relative;display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:12px;border:1.5px dashed rgba(15,23,42,.22);background:var(--mp-cream);color:var(--mp-muted);transition:background .3s,border-color .3s,color .3s}
 .mp-bonus__ico{flex:0 0 26px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:currentColor}
 .mp-bonus__ico svg{width:24px;height:24px}
