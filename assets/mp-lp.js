@@ -428,7 +428,7 @@
       var p = products[parseInt(img.getAttribute('data-flacon-index'), 10)] || products[0];
       if (!p) return; img.src = withWidth(p.image, 600); img.alt = T.flaconAlt(p.number);
     });
-    var track = q('[data-flacons]');
+    var track = q('[data-flacons]:not([data-manual])');
     if (track) {
       var set = products.slice(0, 12);
       var html = set.map(function(p){ return '<div class="mp-flacons__item"><img src="' + esc(withWidth(p.image, 240)) + '" width="120" height="120" alt="' + esc(T.flaconAlt(p.number)) + '" loading="lazy"></div>'; }).join('');
