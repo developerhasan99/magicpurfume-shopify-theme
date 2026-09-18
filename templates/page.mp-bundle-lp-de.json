@@ -114,7 +114,7 @@
       "settings": {
         "text_desktop": "Nur kurz: 6 Parfüms für {price}",
         "text_mobile": "6 Parfüms für {price}",
-        "timer_label": "Angebot endet in",
+        "timer_label": "Einmaliges Angebot",
         "label_hours": "Std",
         "label_minutes": "Min",
         "label_seconds": "Sek"
@@ -414,9 +414,9 @@
         "tile-1": {
           "type": "tile",
           "settings": {
-            "video": "shopify://files/videos/VID-20250403-WA0000.mp4",
+            "video": "shopify://files/videos/magic_perfume_FinnjaV_DuftWieVery_5b40c218.mov",
             "video_url": "",
-            "caption": "Kundenvideo",
+            "caption": "",
             "soon_label": "Video folgt in Kürze",
             "play_label": "Video abspielen"
           }
@@ -424,6 +424,7 @@
         "tile-2": {
           "type": "tile",
           "settings": {
+            "video": "shopify://files/videos/magic_perfume_DariaO_DuftWiePara_79ffa2bd.mov",
             "video_url": "",
             "caption": "Kundenvideo",
             "soon_label": "Video folgt in Kürze",
@@ -433,6 +434,7 @@
         "tile-3": {
           "type": "tile",
           "settings": {
+            "video": "shopify://files/videos/04_ROAS2.00_ad120253056297350514_W35_InspiredBy_V1_4x5.mp4",
             "video_url": "",
             "caption": "Kundenvideo",
             "soon_label": "Video folgt in Kürze",
@@ -442,6 +444,7 @@
         "tile-4": {
           "type": "tile",
           "settings": {
+            "video": "shopify://files/videos/magic_perfume_Anna_SophiaZ_DuftWieLIBR_64e5df0c.mov",
             "video_url": "",
             "caption": "Kundenvideo",
             "soon_label": "Video folgt in Kürze",
@@ -451,6 +454,7 @@
         "tile-5": {
           "type": "tile",
           "settings": {
+            "video": "shopify://files/videos/05_ROAS1.59_11.08_Arbitrage_HighOilConcentration_V2_9x16.mp4",
             "video_url": "",
             "caption": "Kundenvideo",
             "soon_label": "Video folgt in Kürze",
@@ -460,6 +464,7 @@
         "tile-6": {
           "type": "tile",
           "settings": {
+            "video": "shopify://files/videos/04_ROAS1.69_29.08_Trybe_AntoniaLeni_SauvageElixir.mp4",
             "video_url": "",
             "caption": "Kundenvideo",
             "soon_label": "Video folgt in Kürze",
@@ -693,6 +698,7 @@
         "cta_micro": "60 Tage Geld-zurück-Garantie.",
         "photo1_url": "https://magicperfume.co/cdn/shop/files/WhatsApp_Image_2026-01-17_at_10.59.01.jpg?width=900",
         "photo1_alt": "Magic Perfume Flaschen an der Abfüllanlage, behandschuhte Hände stellen eine Flasche ab",
+        "photo2_image": "shopify://shop_images/mp-hero-mobile-bestseller-2.png",
         "photo2_url": "https://magicperfume.co/cdn/shop/files/Camila_Sena_Oliveira_1.webp",
         "photo2_alt": "Zwei 30-ml-Flaschen von Magic Perfume auf einem Schminktisch"
       }
@@ -809,49 +815,49 @@
         "flacon_mViWLX": {
           "type": "flacon",
           "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "image": "shopify://shop_images/MAGYX_PARFUM_288_c.png",
             "alt": ""
           }
         },
         "flacon_cWVgxK": {
           "type": "flacon",
           "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "image": "shopify://shop_images/MAGYX_PARFUM_067_c.png",
             "alt": ""
           }
         },
         "flacon_87kGg8": {
           "type": "flacon",
           "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "image": "shopify://shop_images/MAGYX_PARFUM_228_c.png",
             "alt": ""
           }
         },
         "flacon_zXqHKj": {
           "type": "flacon",
           "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "image": "shopify://shop_images/MAGYX_PARFUM_247_c.png",
             "alt": ""
           }
         },
         "flacon_8n7DHr": {
           "type": "flacon",
           "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "image": "shopify://shop_images/MAGYX_PARFUM_366_c.png",
             "alt": ""
           }
         },
         "flacon_zHjWKT": {
           "type": "flacon",
           "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "image": "shopify://shop_images/MAGYX_PARFUM_252_c.png",
             "alt": ""
           }
         },
         "flacon_pGUn8E": {
           "type": "flacon",
           "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "image": "shopify://shop_images/MAGYX_PARFUM_232_c.png",
             "alt": ""
           }
         }
@@ -955,7 +961,7 @@
         "background": "cream2",
         "heading": "Was dir eine Flasche Magic Perfume wirklich bringt",
         "sub": "Sechs Dinge, die gleich bleiben, egal welche Düfte du wählst.",
-        "center_image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+        "center_image": "shopify://shop_images/mp-hero-mobile-burodufte.png",
         "center_alt": "Eine einzelne 50-ml-Flasche von Magic Perfume",
         "trust_heading": "Drei Dinge, die wir dir schriftlich geben",
         "trust_sub": "Bei keinem davon Spielchen im Kleingedruckten.",
@@ -1212,7 +1218,7 @@
             "rating": 5,
             "date": "20.08.2026",
             "title": "",
-            "text": "My friend that has been using one of the Lancôme perfumes for years, couldn’t tell the difference of my dupe and her own expensive bottle!😂 she thought I also paid over 100 euros. The delivery was fast and I’m very satisfied with the scent and its durability. It stays on for over 12 hours! Will buy again",
+            "text": "Meine Freundin, die seit Jahren dasselbe Lancôme-Parfüm benutzt, konnte den Unterschied zwischen meinem Dupe und ihrem teuren Flakon nicht erkennen! 😂 Sie dachte, ich hätte auch über 100 Euro bezahlt. Die Lieferung war schnell und ich bin sehr zufrieden mit dem Duft und seiner Haltbarkeit. Er bleibt über 12 Stunden! Ich kaufe wieder.",
             "name": "Rozhin",
             "url": "https://www.trustpilot.com/reviews/6a86d6a0b3aa4a7a1ba16900"
           }
