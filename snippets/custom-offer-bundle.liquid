@@ -135,7 +135,7 @@
     class="w-full flex gap-2 flex-wrap items-center !mb-0 text-lg font-bold !py-3 !px-2 rounded-full button bg-[#22613a] transition-colors shadow-xl tracking-normal button--full-width"
   >
     <span x-show="$store.bundleBuilder.selectedProducts.length < {{ product_count }}" x-text="'Wähle noch ' + ({{ product_count }} - $store.bundleBuilder.selectedProducts.length) + ' aus'"></span>
-    <span x-show="$store.bundleBuilder.selectedProducts.length === {{ product_count }}">Jetzt kaufen</span>
+    <span x-show="$store.bundleBuilder.selectedProducts.length === {{ product_count }}">Duft ansehen</span>
     <span class="size-2 rounded-full inline-block bg-white/50"></span>
     <span class="current-price">{{ selected_variant.price | money }}</span>
     <div x-show="$store.bundleBuilder.addingToCart" class="loading__spinner">

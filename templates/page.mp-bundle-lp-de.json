@@ -127,7 +127,7 @@
         "logo_url": "https://magicperfume.co/cdn/shop/files/magic-perfume-logo.png?v=1770090849&width=600",
         "logo_alt": "Magic Perfume",
         "logo_link": "/",
-        "button_desktop": "Jetzt kaufen",
+        "button_desktop": "Duft ansehen",
         "button_mobile": "Kaufen",
         "button_url": "#mp-picker"
       }
@@ -798,90 +798,6 @@
     },
     "flacons": {
       "type": "mp-lp-flacons",
-      "blocks": {
-        "flacon_Wfxr83": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_ymYm3Q": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_ekmnCX": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_qfkEEm": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_BYNTx4": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_kWztBY": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_kzrEXN": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_tbLkGK": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_WhayVV": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        },
-        "flacon_FexGGr": {
-          "type": "flacon",
-          "settings": {
-            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
-            "alt": ""
-          }
-        }
-      },
-      "block_order": [
-        "flacon_Wfxr83",
-        "flacon_ymYm3Q",
-        "flacon_ekmnCX",
-        "flacon_qfkEEm",
-        "flacon_BYNTx4",
-        "flacon_kWztBY",
-        "flacon_kzrEXN",
-        "flacon_tbLkGK",
-        "flacon_WhayVV",
-        "flacon_FexGGr"
-      ],
       "settings": {
         "caption": "Ein paar der {count}, aus denen du wählen kannst"
       }
@@ -971,7 +887,6 @@
         "background": "cream2",
         "heading": "Was dir eine Flasche Magic Perfume wirklich bringt",
         "sub": "Sechs Dinge, die gleich bleiben, egal welche Düfte du wählst.",
-        "center_image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
         "center_alt": "Eine einzelne 50-ml-Flasche von Magic Perfume",
         "trust_heading": "Drei Dinge, die wir dir schriftlich geben",
         "trust_sub": "Bei keinem davon Spielchen im Kleingedruckten.",
