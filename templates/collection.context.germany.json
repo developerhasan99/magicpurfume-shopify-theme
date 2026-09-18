@@ -12,5 +12,13 @@
     "market": "germany"
   },
   "parent": "collection.json",
-  "sections": {}
+  "sections": {
+    "collection_hero_a48jJB": {
+      "disabled": false,
+      "settings": {
+        "show_rating_badge": false
+      },
+      "blocks": {}
+    }
+  }
 }
