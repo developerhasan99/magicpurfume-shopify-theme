@@ -798,6 +798,74 @@
     },
     "flacons": {
       "type": "mp-lp-flacons",
+      "blocks": {
+        "flacon_MtA9NX": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        },
+        "flacon_mViWLX": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        },
+        "flacon_cWVgxK": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        },
+        "flacon_87kGg8": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        },
+        "flacon_zXqHKj": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        },
+        "flacon_8n7DHr": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        },
+        "flacon_zHjWKT": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        },
+        "flacon_pGUn8E": {
+          "type": "flacon",
+          "settings": {
+            "image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
+            "alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "flacon_MtA9NX",
+        "flacon_mViWLX",
+        "flacon_cWVgxK",
+        "flacon_87kGg8",
+        "flacon_zXqHKj",
+        "flacon_8n7DHr",
+        "flacon_zHjWKT",
+        "flacon_pGUn8E"
+      ],
       "settings": {
         "caption": "Ein paar der {count}, aus denen du wählen kannst"
       }
@@ -887,6 +955,7 @@
         "background": "cream2",
         "heading": "Was dir eine Flasche Magic Perfume wirklich bringt",
         "sub": "Sechs Dinge, die gleich bleiben, egal welche Düfte du wählst.",
+        "center_image": "shopify://shop_images/MAGYX_PARFUM_718_c.png",
         "center_alt": "Eine einzelne 50-ml-Flasche von Magic Perfume",
         "trust_heading": "Drei Dinge, die wir dir schriftlich geben",
         "trust_sub": "Bei keinem davon Spielchen im Kleingedruckten.",
