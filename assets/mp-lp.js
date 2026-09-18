@@ -424,16 +424,6 @@
 
   /* ---------- decorative product images ---------- */
   function fillImages(products){
-    qa('img[data-flacon-index]').forEach(function(img){
-      var p = products[parseInt(img.getAttribute('data-flacon-index'), 10)] || products[0];
-      if (!p) return; img.src = withWidth(p.image, 600); img.alt = T.flaconAlt(p.number);
-    });
-    var track = q('[data-flacons]:not([data-manual])');
-    if (track) {
-      var set = products.slice(0, 12);
-      var html = set.map(function(p){ return '<div class="mp-flacons__item"><img src="' + esc(withWidth(p.image, 240)) + '" width="120" height="120" alt="' + esc(T.flaconAlt(p.number)) + '" loading="lazy"></div>'; }).join('');
-      track.innerHTML = html + html;
-    }
     var gal = q('[data-gallery]');
     if (gal) {
       gal.innerHTML = products.slice(0, 10).map(function(p){ return '<div class="mp-gallery__item"><img src="' + esc(withWidth(p.image, 400)) + '" width="200" height="200" alt="' + esc(T.flaconAlt(p.number)) + '" loading="lazy"></div>'; }).join('');

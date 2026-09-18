@@ -1,17 +1,17 @@
-{%- comment -%} MP LP · Flacons strip. Scrolling row of thumbnails; caption is a token-aware text setting. By default the row is filled by JS from the catalog, but adding image blocks below lets a merchant pin specific, manually-chosen images instead. {%- endcomment -%}
+{%- comment -%} MP LP · Flacons strip. Scrolling row of thumbnails; caption is a token-aware text setting. Add "Flacon image" blocks to fill the row — no blocks means an empty strip. {%- endcomment -%}
+{%- liquid
+  assign has_images = false
+  for block in section.blocks
+    if block.settings.image != blank
+      assign has_images = true
+    endif
+  endfor
+-%}
 <div class="mp-lp">
 <div class="mp-flacons" id="mp-flacons">
   <div class="mp-flacons__cap">{% render 'mp-lp-tokens', text: section.settings.caption, plain: true %}</div>
-  {%- liquid
-    assign has_images = false
-    for block in section.blocks
-      if block.settings.image != blank
-        assign has_images = true
-      endif
-    endfor
-  -%}
   {%- if has_images -%}
-    <div class="mp-flacons__track" data-flacons data-manual aria-hidden="true">
+    <div class="mp-flacons__track" aria-hidden="true">
       {%- for i in (1..2) -%}
         {%- for block in section.blocks -%}
           {%- if block.settings.image != blank -%}
@@ -22,8 +22,6 @@
         {%- endfor -%}
       {%- endfor -%}
     </div>
-  {%- else -%}
-    <div class="mp-flacons__track" data-flacons aria-hidden="true"></div>
   {%- endif -%}
 </div>
 </div>

@@ -27,7 +27,9 @@
       <div class="mp-arch__center">
         <span class="mp-arch__ring mp-arch__ring--2"></span>
         <span class="mp-arch__ring mp-arch__ring--1"></span>
-        <img data-flacon-index="4" src="" width="240" height="240" alt="{{ section.settings.center_alt | escape }}" loading="lazy">
+        {%- if section.settings.center_image != blank -%}
+        <img src="{{ section.settings.center_image | image_url: width: 480 }}" width="240" height="240" alt="{{ section.settings.center_alt | escape }}" loading="lazy">
+        {%- endif -%}
       </div>
       <ul class="mp-tiles mp-tiles--r">
         {%- assign tile_j = 0 -%}
@@ -75,6 +77,7 @@
     { "type": "text", "id": "heading", "label": "Heading", "default": "What a Magic Perfume bottle actually gets you" },
     { "type": "text", "id": "sub", "label": "Subheading", "default": "Six things that stay the same whichever scents you choose." },
     { "type": "header", "content": "Center image" },
+    { "type": "image_picker", "id": "center_image", "label": "Center image" },
     { "type": "text", "id": "center_alt", "label": "Center image alt text", "default": "A single 50 ml Magic Perfume bottle" },
     { "type": "header", "content": "Trust" },
     { "type": "text", "id": "trust_heading", "label": "Trust heading", "default": "Three things we put in writing" },
