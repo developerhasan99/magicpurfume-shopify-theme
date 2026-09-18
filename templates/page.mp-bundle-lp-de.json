@@ -12,12 +12,12 @@
     "core": {
       "type": "mp-lp-core",
       "settings": {
-        "bundle_handle": "6-x-50ml-parfumflaschen",
+        "bundle_handle": "6-x-50ml-Duftgarderobe",
         "order_collection": "best-sellers",
         "fill_collection": "all",
         "bundle_size": 6,
         "bestseller_count": 20,
-        "ship_cents": 549,
+        "ship_cents": 600,
         "variant_title": "50ml",
         "bundle_variant_fallback": 48445769122050,
         "money_format": "€{amount_comma}",
