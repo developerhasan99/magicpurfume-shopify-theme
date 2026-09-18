@@ -195,7 +195,7 @@
         "heading": "Neue Düfte",
         "subheading": "",
         "collection": "neue-dufte",
-        "show_all_button_text": "Alle Bestseller ansehen",
+        "show_all_button_text": "Alle Düfte ansehen",
         "padding_top": 32,
         "padding_bottom": 72
       }
@@ -309,7 +309,7 @@
         "collection_xgUpzQ": {
           "type": "collection",
           "settings": {
-            "tab_title": "FÜR FRAUEN",
+            "tab_title": "Damen",
             "collection": "fuer-frauen",
             "button_text": "Alle anzeigen"
           }
@@ -317,7 +317,7 @@
         "collection_3WBTm3": {
           "type": "collection",
           "settings": {
-            "tab_title": "FÜR MÄNNER",
+            "tab_title": "Herren",
             "collection": "fuer-maenner",
             "button_text": "Alle anzeigen"
           }
