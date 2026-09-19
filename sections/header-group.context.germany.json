@@ -18,7 +18,8 @@
       "blocks": {
         "payment_icon_KF79X3": {
           "settings": {
-            "icon": "shopify://shop_images/Flag_of_Germany_svg.webp"
+            "icon": "shopify://shop_images/Flag_of_Germany_svg.webp",
+            "label": "Qualität"
           }
         }
       }
