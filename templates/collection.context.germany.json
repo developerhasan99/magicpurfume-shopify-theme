@@ -14,7 +14,7 @@
   "parent": "collection.json",
   "sections": {
     "collection_hero_a48jJB": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "show_rating_badge": false
       },
