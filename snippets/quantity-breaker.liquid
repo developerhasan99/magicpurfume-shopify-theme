@@ -263,7 +263,7 @@
           x-text="'Wähle noch ' + $store.qb.remaining + ($store.qb.remaining === 1 ? ' Duft' : ' Düfte')"></span>
 
         <span x-show="$store.qb.isComplete">{{ 'products.product.add_to_cart' | t }}</span>
-        <div class="flex items-center" x-show="$store.qb.isComplete">
+        {% comment %} <div class="flex items-center" x-show="$store.qb.isComplete">
           <div
             class="inline-block text-lg bg-[#0c5224] px-3 rounded"
             id="product-price"
@@ -272,7 +272,7 @@
             <span class="compare-price line-through text-white/50 text-base" style="display: none">{{ selected_variant.compare_at_price | money }}</span>
             <span class="current-price">{{ selected_variant.price | money }}</span>
           </div>
-        </div>
+        </div> {% endcomment %}
 
         {%- render 'loading-spinner' -%}
       </button>
