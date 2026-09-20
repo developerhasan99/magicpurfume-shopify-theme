@@ -14,7 +14,7 @@
       "disabled": true,
       "name": "Collection Hero",
       "settings": {
-        "show_rating_badge": true,
+        "show_rating_badge": false,
         "rating_text": "Verifierat av över 10 000 doftälskare"
       }
     },
