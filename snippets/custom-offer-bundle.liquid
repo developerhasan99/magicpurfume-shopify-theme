@@ -137,7 +137,7 @@
     <span x-show="$store.bundleBuilder.selectedProducts.length < {{ product_count }}" x-text="'Wähle noch ' + ({{ product_count }} - $store.bundleBuilder.selectedProducts.length) + ' aus'"></span>
     <span x-show="$store.bundleBuilder.selectedProducts.length === {{ product_count }}">Duft ansehen</span>
     <span class="size-2 rounded-full inline-block bg-white/50"></span>
-    {% comment %} <span class="current-price">{{ selected_variant.price | money }}</span> {% endcomment %}
+    <span class="current-price">{{ selected_variant.price | money }}</span>
     <div x-show="$store.bundleBuilder.addingToCart" class="loading__spinner">
       <svg
         xmlns="http://www.w3.org/2000/svg"
