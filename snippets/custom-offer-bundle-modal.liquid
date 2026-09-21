@@ -1,3 +1,26 @@
+{% liquid
+  assign filter_all = 'bundle.filter_all' | t | strip
+  assign filter_all_check = filter_all | downcase
+  if filter_all == blank or filter_all_check contains 'translation missing'
+    assign filter_all = 'Alle'
+  endif
+  assign filter_men = 'bundle.filter_men' | t | strip
+  assign filter_men_check = filter_men | downcase
+  if filter_men == blank or filter_men_check contains 'translation missing'
+    assign filter_men = 'Herren'
+  endif
+  assign filter_women = 'bundle.filter_women' | t | strip
+  assign filter_women_check = filter_women | downcase
+  if filter_women == blank or filter_women_check contains 'translation missing'
+    assign filter_women = 'Damen'
+  endif
+  assign filter_new_arrivals = 'bundle.filter_new_arrivals' | t | strip
+  assign filter_new_arrivals_check = filter_new_arrivals | downcase
+  if filter_new_arrivals == blank or filter_new_arrivals_check contains 'translation missing'
+    assign filter_new_arrivals = 'Neuheiten'
+  endif
+%}
+
 <div
   x-data
   x-transition
@@ -31,19 +54,23 @@
           <span x-text="$store.bundleBuilder.bundleLength"></span> Flaschen zusammen</p>
       </div>
       <div x-show="$store.bundleBuilder.selectedProducts.length < $store.bundleBuilder.bundleLength" class="px-3 py-2">
-        <div class="flex gap-1.5">
+        <div class="flex flex-wrap gap-1.5">
           <button
             @click="$store.bundleBuilder.activeCategory = 'All'"
             :class="$store.bundleBuilder.activeCategory === 'All' ? 'border-[#22613A] bg-[#22613A] text-white hover:!text-white' : 'bg-white border-gray-200'"
-            class="px-2 py-1.5 rounded-full font-semibold border-2 border-solid cursor-pointer hover:text-[#22613A] hover:border-[#22613A]">Bestseller</button>
+            class="px-2 py-1.5 rounded-full font-semibold border-2 border-solid cursor-pointer hover:text-[#22613A] hover:border-[#22613A]">{{ filter_all | escape }}</button>
           <button
             @click="$store.bundleBuilder.activeCategory = 'fuer-maenner'"
             :class="$store.bundleBuilder.activeCategory === 'fuer-maenner' ? 'border-[#22613A] bg-[#22613A] text-white hover:!text-white' : 'bg-white border-gray-200'"
-            class="px-2 py-1.5 rounded-full font-semibold border-2 border-solid cursor-pointer hover:text-[#22613A] hover:border-[#22613A]">Herren</button>
+            class="px-2 py-1.5 rounded-full font-semibold border-2 border-solid cursor-pointer hover:text-[#22613A] hover:border-[#22613A]">{{ filter_men | escape }}</button>
           <button
             @click="$store.bundleBuilder.activeCategory = 'fuer-frauen'"
             :class="$store.bundleBuilder.activeCategory === 'fuer-frauen' ? 'border-[#22613A] bg-[#22613A] text-white hover:!text-white' : 'bg-white border-gray-200'"
-            class="px-2 py-1.5 rounded-full font-semibold border-2 border-solid cursor-pointer hover:text-[#22613A] hover:border-[#22613A]">Damen</button>
+            class="px-2 py-1.5 rounded-full font-semibold border-2 border-solid cursor-pointer hover:text-[#22613A] hover:border-[#22613A]">{{ filter_women | escape }}</button>
+          <button
+            @click="$store.bundleBuilder.activeCategory = 'new'"
+            :class="$store.bundleBuilder.activeCategory === 'new' ? 'border-[#22613A] bg-[#22613A] text-white hover:!text-white' : 'bg-white border-gray-200'"
+            class="px-2 py-1.5 rounded-full font-semibold border-2 border-solid cursor-pointer hover:text-[#22613A] hover:border-[#22613A]">{{ filter_new_arrivals | escape }}</button>
         </div>
       </div>
       <div class="px-3 pb-3">
@@ -82,8 +109,7 @@
       <template x-if="$store.bundleBuilder.selectedProducts.length < $store.bundleBuilder.bundleLength">
         <div class="flex flex-col gap-1.5">
           <template x-for="product in $store.bundleBuilder.availableProducts" :key="product.id">
-            <template x-if="(product.tags.some(tag => tag === $store.bundleBuilder.activeCategory) || $store.bundleBuilder.activeCategory === 'All') &&
-         ($store.bundleBuilder.searchText === '' || product.name.toLowerCase().includes($store.bundleBuilder.searchText.toLowerCase()) || (product.inspiration_name && product.inspiration_name.toLowerCase().includes($store.bundleBuilder.searchText.toLowerCase())))">
+            <template x-if="$store.bundleBuilder.matchesProduct(product)">
               <button
                 @click="$store.bundleBuilder.addRemoveProduct(product)"
                 :class="$store.bundleBuilder.isProductSelected(product.id) ? 'border-[#22613A]' : 'border-gray-200 border'"
@@ -103,10 +129,10 @@
                   </div>
                   <div class="flex items-center gap-1.5">
                     <span
-                      x-show="product.tags.some(tag => tag === 'fuer-maenner')"
+                      x-show="$store.bundleBuilder.productInCollection(product, 'fuer-maenner')"
                       class="shrink-0 px-2 py-0.5 rounded-full bg-[#f1f4f2] text-[#6b7280] text-[10px] font-semibold leading-tight">Herren</span>
                     <span
-                      x-show="product.tags.some(tag => tag === 'fuer-frauen')"
+                      x-show="$store.bundleBuilder.productInCollection(product, 'fuer-frauen')"
                       class="shrink-0 px-2 py-0.5 rounded-full bg-[#f1f4f2] text-[#6b7280] text-[10px] font-semibold leading-tight">Damen</span>
                     <span
                       x-show="product.occasion"

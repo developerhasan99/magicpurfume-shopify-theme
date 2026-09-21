@@ -8,6 +8,12 @@
  * ------------------------------------------------------------
  */
 {
+  "bundle": {
+    "filter_all": "Alle",
+    "filter_men": "Herren",
+    "filter_women": "Damen",
+    "filter_new_arrivals": "Neuheiten"
+  },
   "general": {
     "password_page": {
       "login_form_heading": "Shop mit Passwort betreten:",
