@@ -64,6 +64,18 @@
     },
     "scent_bundle_builder_single_F4jBXt": {
       "type": "scent-bundle-builder-single",
+      "blocks": {
+        "image_bAgAEd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-1.jpg",
+            "alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_bAgAEd"
+      ],
       "name": "Bundle builder 60% off",
       "settings": {
         "grid_collection": "best-sellers",
