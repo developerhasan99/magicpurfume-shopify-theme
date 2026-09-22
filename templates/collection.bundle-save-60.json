@@ -11,6 +11,7 @@
   "sections": {
     "collection_hero_a48jJB": {
       "type": "collection-hero",
+      "disabled": true,
       "name": "Collection Hero",
       "settings": {
         "show_rating_badge": false,
@@ -42,6 +43,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
@@ -59,12 +61,45 @@
         "padding_top": 0,
         "padding_bottom": 60
       }
+    },
+    "scent_bundle_builder_single_F4jBXt": {
+      "type": "scent-bundle-builder-single",
+      "name": "Bundle builder 60% off",
+      "settings": {
+        "grid_collection": "best-sellers",
+        "parent_product": "2-kaufen-3-weitere-mit-60-rabatt-erhalten",
+        "bundle_total": 5,
+        "bundle_discount_qty": 3,
+        "discount_percent": 60,
+        "offer_badge": "PayDay Deal",
+        "heading": "Bygg din doftgarderob för",
+        "heading_accent": "60% mindre",
+        "subheading": "<p>Köp 2x100ml av dina favoritparfymer och få <strong>3x100ml GRATIS</strong> i PayDay-paketet</p>",
+        "slot_label": "Välj din doft",
+        "discount_slot_label": "Rabatterad doft",
+        "discount_pill_label": "-60%",
+        "counter_text": "[selected] / [total] valda",
+        "hint_text": "Lägg till [remaining] doft till för att låsa upp din rabatt!",
+        "hint_text_one": "Lägg till 1 doft till för att låsa upp din rabatt!",
+        "done_text": "Ditt paket är klart!",
+        "total_label": "Ordinarie pris:",
+        "price_label": "Nu:",
+        "per_bottle_label": "Endast [original_price] [price] per flaska",
+        "savings_label": "Spara [amount] idag",
+        "search_placeholder": "Hitta din parfym",
+        "cta_label": "Lägg",
+        "empty_text": "Inga dofter matchar din sökning.",
+        "cta_button_label": "Lägg i varukorg",
+        "cta_disabled_label": "Lägg till [remaining] doft till",
+        "cta_disabled_label_one": "Lägg till 1 doft till"
+      }
     }
   },
   "order": [
     "collection_hero_a48jJB",
     "popular_products_qtxDBm",
     "banner",
-    "product-grid"
+    "product-grid",
+    "scent_bundle_builder_single_F4jBXt"
   ]
 }
