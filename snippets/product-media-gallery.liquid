@@ -2,6 +2,8 @@
   {% assign product = product_param %}
 {% endif %}
 
+{% assign de_marketing_images = shop.metaobjects['marketing_images']['german'].images.value %}
+
 <div class="sticky top-6 !mt-0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -36,19 +38,18 @@
               {% endif %}
             {% endfor %}
           {% endif %}
-          {% for image in product.images offset: 1 %}
-            {% assign img_alt = image.alt | downcase %}
-            {% unless img_alt contains "bundle_" %}
+          {% if de_marketing_images != blank %}
+            {% for image in de_marketing_images %}
               <img
                 src="{{ image.src | image_url: width: 450 }}"
                 alt="{{ image.alt }}"
                 height="{{ image.height }}"
                 width="{{ image.width }}"
-                class="productSwiperImage swiper-slide md:rounded-lg">
-            {% endunless %}
-          {% endfor %}
+                class="productSwiperImage swiper-slide md:rounded-lg marketing_image">
+            {% endfor %}
+          {% endif %}
         {% else %}
-          {% for image in product.images %}
+          {% for image in product.images limit: 1 %}
             <img
               src="{{ image.src | img_url: 'master' }}"
               alt="{{ image.alt }}"
@@ -56,6 +57,16 @@
               width="{{ image.width }}"
               class="productSwiperImage swiper-slide md:rounded-lg">
           {% endfor %}
+          {% if de_marketing_images != blank %}
+            {% for image in de_marketing_images %}
+              <img
+                src="{{ image.src | image_url: width: 450 }}"
+                alt="{{ image.alt }}"
+                height="{{ image.height }}"
+                width="{{ image.width }}"
+                class="productSwiperImage swiper-slide md:rounded-lg marketing_image">
+            {% endfor %}
+          {% endif %}
         {% endif %}
       </div>
       <div
@@ -179,20 +190,19 @@
               {% endif %}
             {% endfor %}
           {% endif %}
-          {% for image in product.images offset: 1 %}
-            {% assign img_alt = image.alt | downcase %}
-            {% unless img_alt contains "bundle_" %}
+          {% if de_marketing_images != blank %}
+            {% for image in de_marketing_images %}
               <img
                 id="slider-thumbnail-{{ forloop.index0 }}"
                 src="{{ image | image_url: width: 150, height: 150 }}"
                 alt="{{ image.alt }}"
                 height="150"
                 width="150"
-                class="productThumbnail swiper-slide slide max-w-16 md:max-w-24 opacity-70 border-2 border-solid border-gray-200 rounded-lg cursor-pointer" />
-            {% endunless %}
-          {% endfor %}
+                class="productThumbnail swiper-slide slide max-w-16 md:max-w-24 opacity-70 border-2 border-solid border-gray-200 rounded-lg cursor-pointer marketing_image" />
+            {% endfor %}
+          {% endif %}
         {% else %}
-          {% for image in product.images %}
+          {% for image in product.images limit: 1 %}
             <img
               id="slider-thumbnail-{{ forloop.index0 }}"
               src="{{ image | image_url: width: 150, height: 150 }}"
@@ -201,6 +211,17 @@
               width="150"
               class="productThumbnail swiper-slide slide max-w-16 md:max-w-24 opacity-70 border-2 border-solid border-gray-200 rounded-lg cursor-pointer" />
           {% endfor %}
+          {% if de_marketing_images != blank %}
+            {% for image in de_marketing_images %}
+              <img
+                id="slider-thumbnail-{{ forloop.index0 }}"
+                src="{{ image | image_url: width: 150, height: 150 }}"
+                alt="{{ image.alt }}"
+                height="150"
+                width="150"
+                class="productThumbnail swiper-slide slide max-w-16 md:max-w-24 opacity-70 border-2 border-solid border-gray-200 rounded-lg cursor-pointer marketing_image" />
+            {% endfor %}
+          {% endif %}
         {% endif %}
       </div>
     </div>
