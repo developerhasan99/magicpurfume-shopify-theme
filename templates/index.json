@@ -358,7 +358,7 @@
           "type": "stack",
           "settings": {
             "stack_heading": "Preis pro 50 ml",
-            "stack_subheading": "Magic: 20,00 € im 6er-Set. Designer-Beispiel: 110,00 €¹"
+            "stack_subheading": "Magic: 9,00 € im 6er-Set. Designer-Beispiel: 110,00 €"
           }
         },
         "stack_cRW46m": {
@@ -373,6 +373,14 @@
           "settings": {
             "stack_heading": "Marke & Flakon",
             "stack_subheading": "Magic: Duft im Fokus · schlichter Flakon. Designer: Designername · markentypischer Flakon"
+          }
+        },
+        "stack_KLMkwf": {
+          "type": "stack",
+          "disabled": true,
+          "settings": {
+            "stack_heading": "Haltbarkeit",
+            "stack_subheading": "12+ Stunden"
           }
         },
         "stack_Kfeqb4": {
@@ -396,6 +404,7 @@
         "stack_i9RNmg",
         "stack_cRW46m",
         "stack_pbqqYL",
+        "stack_KLMkwf",
         "stack_Kfeqb4",
         "stack_nizxYb"
       ],
@@ -869,7 +878,7 @@
         "collapsible_row_rCVDnP": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Ist es ein Eau de Toilette oder ein Eau de Parfum?",
+            "heading": "Sind eure Düfte Eau de Parfum?",
             "icon": "none",
             "row_content": "<p>Nein, es ist ein Eau de Parfum – es enthält zwischen 19 % und 21 % Duftöl, je nach Parfüm. Eau de Toilette enthält zum Beispiel zwischen 5 und 15 %.</p>",
             "page": ""
@@ -878,7 +887,7 @@
         "collapsible_row_rNbx6p": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Wie lange hält das Parfüm?",
+            "heading": "Wie lange hält der Duft?",
             "icon": "none",
             "row_content": "<p>Das Parfüm hält je nach Person und Anwendungsart unterschiedlich lange an. Auf die Haut gesprüht hält es dank unserer Formel und 19–21 % Parfümölkonzentration 8 bis sogar 12 Stunden und länger. Nach einer längeren Zeitspanne verblasst der Duft.</p>",
             "page": ""
