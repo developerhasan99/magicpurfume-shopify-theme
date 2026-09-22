@@ -7,7 +7,7 @@
   assign b_discount_qty = st.bundle_discount_qty | plus: 0
   assign b_paid = b_total | minus: b_discount_qty
   assign b_percent = st.discount_percent | plus: 0
-  assign b_ribbon = 'Köp ' | append: b_paid | append: ', få ' | append: b_discount_qty | append: ' till med ' | append: b_percent | append: '% rabatt'
+  assign b_ribbon = 'Kaufe ' | append: b_paid | append: ', erhalte ' | append: b_discount_qty | append: ' weitere mit ' | append: b_percent | append: '% Rabatt'
 
   assign parent_variant = st.parent_product.selected_or_first_available_variant
   assign parent_price = parent_variant.price | default: 0
@@ -81,7 +81,7 @@
                     class="swiper-slide sbb-gallery__thumb"
                     role="button"
                     tabindex="0"
-                    aria-label="Visa bild {{ forloop.index }}"
+                    aria-label="Bild {{ forloop.index }} anzeigen"
                     {{ block.shopify_attributes }}>
                     <img
                       src="{{ img | image_url: width: 160 }}"
@@ -136,7 +136,7 @@
                       type="button"
                       class="sbb-slot__x"
                       @click.stop="removeAt(i)"
-                      aria-label="Ta bort">&times;</button>
+                      aria-label="Entfernen">&times;</button>
                   </span>
                 </template>
                 <template x-if="!slot(i)">
@@ -243,19 +243,19 @@
     </form>
     <div class="sbb-controls__row">
       <select x-model="brand" x-show="brandOptions.length">
-        <option value="">Inspirerad av</option>
+        <option value="">Inspiriert von</option>
         <template x-for="o in brandOptions" :key="o">
-          <option :value="o" x-text="'Doftar som ' + o"></option>
+          <option :value="o" x-text="'Riecht wie ' + o"></option>
         </template>
       </select>
       <select x-model="gender" x-show="genderOptions.length">
-        <option value="">Kön</option>
+        <option value="">Geschlecht</option>
         <template x-for="o in genderOptions" :key="o">
           <option :value="o" x-text="o"></option>
         </template>
       </select>
       <select x-model="occasion" x-show="occasionOptions.length">
-        <option value="">Tillfälle</option>
+        <option value="">Anlass</option>
         <template x-for="o in occasionOptions" :key="o">
           <option :value="o" x-text="o"></option>
         </template>
@@ -300,7 +300,7 @@
           :class="{ 'is-active': isPicked(p.id) }"
           :disabled="!canToggle(p.id)"
           @click="toggle(p.id)">
-          <span x-text="isPicked(p.id) ? 'Tillagd' : {{ st.cta_label | json | escape }}"></span>
+          <span x-text="isPicked(p.id) ? 'Hinzugefügt' : {{ st.cta_label | json | escape }}"></span>
         </button>
       </div>
     </template>
@@ -703,20 +703,20 @@
         "type": "text",
         "id": "heading",
         "label": "Heading",
-        "default": "Bygg din doftgarderob för"
+        "default": "Baue deinen Duftschrank für"
       },
       {
         "type": "text",
         "id": "heading_accent",
         "label": "Heading, highlighted part",
         "info": "Shown in accent color at the end of the heading, e.g. \"60% less\"",
-        "default": "60% mindre"
+        "default": "60% weniger"
       },
       {
         "type": "richtext",
         "id": "subheading",
         "label": "Subheading",
-        "default": "<p>Köp 2x100ml av dina favoritparfymer och få <strong>3x100ml GRATIS</strong> i PayDay-paketet</p>"
+        "default": "<p>Kaufe 2x100ml deiner Lieblingsparfums und erhalte <strong>3x100ml GRATIS</strong> im PayDay-Paket</p>"
       },
       {
         "type": "header",
@@ -726,13 +726,13 @@
         "type": "text",
         "id": "slot_label",
         "label": "Empty slot label",
-        "default": "Välj din doft"
+        "default": "Wähle deinen Duft"
       },
       {
         "type": "text",
         "id": "discount_slot_label",
         "label": "Discounted slot label",
-        "default": "Rabatterad doft"
+        "default": "Rabattierter Duft"
       },
       {
         "type": "text",
@@ -745,26 +745,26 @@
         "id": "counter_text",
         "label": "Progress counter",
         "info": "[selected] / [total]",
-        "default": "[selected] / [total] valda"
+        "default": "[selected] / [total] ausgewählt"
       },
       {
         "type": "text",
         "id": "hint_text",
         "label": "Progress hint",
         "info": "[remaining]",
-        "default": "Lägg till [remaining] doft till för att låsa upp din rabatt!"
+        "default": "Füge [remaining] weitere Düfte hinzu, um deinen Rabatt freizuschalten!"
       },
       {
         "type": "text",
         "id": "hint_text_one",
         "label": "Progress hint, one left",
-        "default": "Lägg till 1 doft till för att låsa upp din rabatt!"
+        "default": "Füge 1 weiteren Duft hinzu, um deinen Rabatt freizuschalten!"
       },
       {
         "type": "text",
         "id": "done_text",
         "label": "Progress done message",
-        "default": "Ditt paket är klart!"
+        "default": "Dein Paket ist fertig!"
       },
       {
         "type": "header",
@@ -774,27 +774,27 @@
         "type": "text",
         "id": "total_label",
         "label": "Original price label",
-        "default": "Ordinarie pris:"
+        "default": "Regulärer Preis:"
       },
       {
         "type": "text",
         "id": "price_label",
         "label": "Your price label",
-        "default": "Nu:"
+        "default": "Jetzt:"
       },
       {
         "type": "text",
         "id": "per_bottle_label",
         "label": "Per bottle label",
         "info": "[original_price] [price] — original_price is struck through and only shown when discounted",
-        "default": "Endast [original_price] [price] per flaska"
+        "default": "Nur [original_price] [price] pro Flasche"
       },
       {
         "type": "text",
         "id": "savings_label",
         "label": "Savings pill label",
         "info": "[amount]",
-        "default": "Spara [amount] idag"
+        "default": "Spare [amount] heute"
       },
       {
         "type": "header",
@@ -804,38 +804,38 @@
         "type": "text",
         "id": "search_placeholder",
         "label": "Search placeholder",
-        "default": "Hitta din parfym"
+        "default": "Finde dein Parfüm"
       },
       {
         "type": "text",
         "id": "cta_label",
         "label": "Card button",
-        "default": "Lägg"
+        "default": "Hinzufügen"
       },
       {
         "type": "text",
         "id": "empty_text",
         "label": "No results message",
-        "default": "Inga dofter matchar din sökning."
+        "default": "Keine Düfte entsprechen deiner Suche."
       },
       {
         "type": "text",
         "id": "cta_button_label",
         "label": "Sticky bar button",
-        "default": "Lägg i varukorg"
+        "default": "In den Warenkorb"
       },
       {
         "type": "text",
         "id": "cta_disabled_label",
         "label": "Buy button, incomplete bundle",
         "info": "[remaining]",
-        "default": "Lägg till [remaining] doft till"
+        "default": "Füge [remaining] weitere Düfte hinzu"
       },
       {
         "type": "text",
         "id": "cta_disabled_label_one",
         "label": "Buy button, one left",
-        "default": "Lägg till 1 doft till"
+        "default": "Füge 1 weiteren Duft hinzu"
       }
     ],
     "blocks": [
