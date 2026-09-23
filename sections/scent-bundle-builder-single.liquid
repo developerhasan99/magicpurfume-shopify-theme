@@ -9,7 +9,7 @@
   assign b_percent = st.discount_percent | plus: 0
   assign b_ribbon = 'Kaufe ' | append: b_paid | append: ', erhalte ' | append: b_discount_qty | append: ' weitere mit ' | append: b_percent | append: '% Rabatt'
 
-  assign parent_variant = st.parent_product.selected_or_first_available_variant
+  assign parent_variant = product.selected_or_first_available_variant
   assign parent_price = parent_variant.price | default: 0
   assign parent_compare_at = parent_variant.compare_at_price | default: 0
   if parent_compare_at <= parent_price
@@ -44,57 +44,12 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+{% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 <div class="sbb sbb--single" x-data="sbbSingleBuilder()">
   <div class="sbb-top">
-    {%- if section.blocks.size > 0 -%}
+    {%- if product.images.size > 0 -%}
       <div class="sbb-gallery">
-        <div class="sbb-gallery__main swiper" id="sbbGalleryMain-{{ section.id }}">
-          <div class="swiper-wrapper">
-            {%- for block in section.blocks -%}
-              {%- assign img = block.settings.image -%}
-              {%- if img != blank -%}
-                <div class="swiper-slide" {{ block.shopify_attributes }}>
-                  <img
-                    src="{{ img | image_url: width: 900 }}"
-                    srcset="{{ img | image_url: width: 600 }} 600w, {{ img | image_url: width: 900 }} 900w, {{ img | image_url: width: 1200 }} 1200w"
-                    sizes="(min-width: 900px) 45vw, 100vw"
-                    alt="{{ block.settings.alt | default: img.alt | escape }}"
-                    width="{{ img.width }}"
-                    height="{{ img.height }}"
-                    loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
-          {%- if section.blocks.size > 1 -%}
-            <div class="swiper-button-prev" id="sbbGalleryPrev-{{ section.id }}"></div>
-            <div class="swiper-button-next" id="sbbGalleryNext-{{ section.id }}"></div>
-          {%- endif -%}
-        </div>
-        {%- if section.blocks.size > 1 -%}
-          <div class="sbb-gallery__thumbs swiper" id="sbbGalleryThumbs-{{ section.id }}">
-            <div class="swiper-wrapper">
-              {%- for block in section.blocks -%}
-                {%- assign img = block.settings.image -%}
-                {%- if img != blank -%}
-                  <div
-                    class="swiper-slide sbb-gallery__thumb"
-                    role="button"
-                    tabindex="0"
-                    aria-label="Bild {{ forloop.index }} anzeigen"
-                    {{ block.shopify_attributes }}>
-                    <img
-                      src="{{ img | image_url: width: 160 }}"
-                      alt=""
-                      width="72"
-                      height="72"
-                      loading="lazy">
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
-            </div>
-          </div>
-        {%- endif -%}
+        {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
     {%- endif -%}
 
@@ -206,7 +161,7 @@
           {%- if parent_variant -%}
             <product-form x-ref="bundleForm" class="sbb-summary__form" data-hide-errors="true" data-section-id="{{ section.id }}">
               {%- form 'product'
-                , st.parent_product
+                , product
                 , id: product_form_id
                 , class: 'sbb-summary__form-inner'
                 , novalidate: 'novalidate'
@@ -607,7 +562,7 @@
   });
 </script>
 
-{%- if section.blocks.size > 1 -%}
+{%- if product.images.size > 1 -%}
   <script>
     (function () {
       function initSbbGallerySwiper() {
@@ -654,16 +609,6 @@
         "id": "grid_collection",
         "label": "Scent grid collection",
         "info": "Defaults to best-sellers. Only 100ml variants are shown."
-      },
-      {
-        "type": "header",
-        "content": "Bundle product"
-      },
-      {
-        "type": "product",
-        "id": "parent_product",
-        "label": "Parent product",
-        "info": "The product added to cart for this bundle. Its first available variant is used; the chosen scents are attached to it as line item properties."
       },
       {
         "type": "header",
@@ -836,25 +781,6 @@
         "id": "cta_disabled_label_one",
         "label": "Buy button, one left",
         "default": "Füge 1 weiteren Duft hinzu"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Gallery image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "text",
-            "id": "alt",
-            "label": "Alt text",
-            "info": "Optional, defaults to the image's own alt text"
-          }
-        ]
       }
     ],
     "presets": [

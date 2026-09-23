@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <div class="flex -mx-[15px] md:mx-0">
-    <div id="productSwiper" class="swiper {% unless product.template_suffix == 'draft-three' %} md:w-[calc(100%-144px)] {% endunless %}">
+    <div id="productSwiper" class="swiper {% unless product.template_suffix == 'draft-three' or product.template_suffix == 'payday-60' %} md:w-[calc(100%-144px)] {% endunless %}">
       <div class="swiper-wrapper">
         {% if product.tags contains "local_image" %}
           {% assign image_found = false %}
@@ -41,7 +41,7 @@
           {% if de_marketing_images != blank %}
             {% for image in de_marketing_images %}
               <img
-                src="{{ image.src | image_url: width: 450 }}"
+                src="{{ image.src | image_url: width: 1080 }}"
                 alt="{{ image.alt }}"
                 height="{{ image.height }}"
                 width="{{ image.width }}"
@@ -60,7 +60,7 @@
           {% if de_marketing_images != blank %}
             {% for image in de_marketing_images %}
               <img
-                src="{{ image.src | image_url: width: 450 }}"
+                src="{{ image.src | image_url: width: 1080 }}"
                 alt="{{ image.alt }}"
                 height="{{ image.height }}"
                 width="{{ image.width }}"
@@ -78,7 +78,7 @@
         id="productSwiperNext"
         class="swiper-button-next rounded-full !flex bg-white !size-10 [&]:after:!text-xl [&]:after:text-gray-900"></div>
     </div>
-    {% unless product.template_suffix == 'draft-three' %}
+    {% unless product.template_suffix == 'draft-three' or product.template_suffix == 'payday-60' %}
       <div class="w-28 lg:w-36 pl-2 [display:none] md:grid grid-rows-3 gap-2">
         <div class="p-3 bg-white rounded-lg text-center flex flex-col items-center justify-center gap-2">
           <svg
