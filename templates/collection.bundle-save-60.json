@@ -79,7 +79,7 @@
       "name": "Bundle builder 60% off",
       "settings": {
         "grid_collection": "best-sellers",
-        "parent_product": "2-kaufen-3-weitere-mit-60-rabatt-erhalten",
+        "parent_product": "bundle-save-60",
         "bundle_total": 5,
         "bundle_discount_qty": 3,
         "discount_percent": 60,
