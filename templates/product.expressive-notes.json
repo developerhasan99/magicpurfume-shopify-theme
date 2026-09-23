@@ -486,10 +486,57 @@
         "heading_PJdXGz",
         "text_Mhwr3T"
       ],
+      "disabled": true,
       "name": "Image and Text",
       "settings": {
         "background_color": "#ffffff",
         "image": "shopify://shop_images/WhatsApp_Image_2026-01-17_at_10.59.01.jpg",
+        "rounded_image": true,
+        "image_placement": "0",
+        "mobile_image_placement": "under_heading",
+        "button_text": "",
+        "button_url": "",
+        "columns_gap": 40,
+        "rows_gap": 20,
+        "content_alignment": "center",
+        "blocks_gap": 24,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40
+      }
+    },
+    "image_and_text_n6Xa4L": {
+      "type": "image-and-text",
+      "blocks": {
+        "heading_6wAegP": {
+          "type": "heading",
+          "settings": {
+            "content": "Hergestellt in der EU. Qualität mit klaren Standards.",
+            "heading_type": "h2",
+            "font_size": 40,
+            "mobile_font_size": 24,
+            "text_color": "#000000"
+          }
+        },
+        "text_RTNMnz": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Unsere Parfüms werden in der EU nach europäischen Kosmetikstandards hergestellt. Mit IFRA-konformen Duftrezepturen.</p><ul><li>Ohne Phthalate </li><li>Ohne Parabene </li><li>Vegan </li><li>Nicht an Tieren getestet</li></ul><p>In Europa hergestellt. Mit IFRA-konformen Duftrezepturen.<br/></p>",
+            "mobile_content": "",
+            "font_size": 18,
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6wAegP",
+        "text_RTNMnz"
+      ],
+      "name": "Image and Text",
+      "settings": {
+        "background_color": "#ffffff",
+        "image": "shopify://shop_images/MAGYX_Site_02.webp",
         "rounded_image": true,
         "image_placement": "0",
         "mobile_image_placement": "under_heading",
@@ -540,7 +587,7 @@
             "content": "<p>„Ehrlich, einer der besten Düfte, die ich seit Jahren gerochen habe. Die Noten sind einfach brutal gut. Der bleibt definitiv dauerhaft in meiner Sammlung.“</p>",
             "author": "Emilia Wagner",
             "author_image": "shopify://shop_images/magic_ugc_female_01.webp",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 4,
             "show_verified_badge": true,
             "product": ""
@@ -552,7 +599,7 @@
             "review_image": "shopify://shop_images/image_1.jpg",
             "content": "<p>„Alle drei Düfte, die ich bestellt habe, riechen echt richtig gut und halten auch lange. Die Düfte sind wirklich nah an den Originalen. Das Einzige war die Lieferzeit, die etwas länger gedauert hat. Aber ganz ehrlich – ich hab trotzdem direkt nochmal bestellt 😄 Man muss nur ein bisschen Geduld haben.“</p>",
             "author": "Clara P.",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 5,
             "show_verified_badge": true,
             "product": ""
@@ -563,7 +610,7 @@
           "settings": {
             "content": "<p>„Ich hab ewig nach Düften gesucht, die hochwertig riechen und auch lange halten. Genau so einen Duft hab ich gesucht.“</p>",
             "author": "Daniel Roth",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 4,
             "show_verified_badge": true,
             "product": ""
@@ -576,7 +623,7 @@
             "content": "<p>„Wusste erst nicht genau, was mich erwartet, aber der Duft hat mich echt positiv überrascht. Riecht super frisch und kommt Aventus ziemlich nah. Hält ordentlich und der Preis ist einfach deutlich besser.“</p>",
             "author": "Michael T.",
             "author_image": "shopify://shop_images/magic_ugc_male_02.webp",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 4,
             "show_verified_badge": true,
             "product": ""
@@ -588,7 +635,7 @@
             "review_image": "shopify://shop_images/magic_175_review.png",
             "content": "<p>„Einer meiner absoluten Lieblingsdüfte. War super schnell da und riecht einfach richtig gut.“</p>",
             "author": "Jonas Hartmann",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 5,
             "show_verified_badge": true,
             "product": ""
@@ -599,7 +646,7 @@
           "settings": {
             "content": "<p>„Meine Freundin meinte direkt, dass ich gut rieche 😄 Seitdem benutze ich ihn fast jeden Tag.“</p>",
             "author": "Lukas Schneider",
-            "date": " vor 5 Tagen",
+            "date": "vor 5 Tagen",
             "rating": 4,
             "show_verified_badge": false,
             "product": ""
@@ -610,7 +657,7 @@
           "settings": {
             "content": "<p>„Am Anfang war ich etwas besorgt, weil sich die Lieferung verzögert hat. Aber als das Parfüm angekommen ist und sich der Duft erst mal gesetzt hat – wow, einfach unglaublich gut.“</p>",
             "author": "Lionel M.",
-            "date": " vor 7 Tagenen",
+            "date": "vor 7 Tagenen",
             "rating": 5,
             "show_verified_badge": true,
             "product": ""
@@ -982,7 +1029,7 @@
             "content": "<p>„Ehrlich, einer der besten Düfte, die ich seit Jahren gerochen habe. Die Noten sind einfach brutal gut. Der bleibt definitiv dauerhaft in meiner Sammlung.“</p>",
             "author": "Emilia Wagner",
             "author_image": "shopify://shop_images/magic_ugc_female_01.webp",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 4,
             "show_verified_badge": true,
             "product": ""
@@ -994,7 +1041,7 @@
             "review_image": "shopify://shop_images/2026-07-02_16h55_49.webp",
             "content": "<p>„Alle drei Düfte, die ich bestellt habe, riechen echt richtig gut und halten auch lange. Die Düfte sind wirklich nah an den Originalen. Das Einzige war die Lieferzeit, die etwas länger gedauert hat. Aber ganz ehrlich – ich hab trotzdem direkt nochmal bestellt 😄 Man muss nur ein bisschen Geduld haben.“</p>",
             "author": "Clara P.",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 5,
             "show_verified_badge": true,
             "product": ""
@@ -1005,7 +1052,7 @@
           "settings": {
             "content": "<p>„Ich hab ewig nach Düften gesucht, die hochwertig riechen und auch lange halten. Genau so einen Duft hab ich gesucht.“</p>",
             "author": "Daniel Roth",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 4,
             "show_verified_badge": true,
             "product": ""
@@ -1017,7 +1064,7 @@
             "review_image": "shopify://shop_images/2026-07-02_16h58_13.webp",
             "content": "<p>„Wusste erst nicht genau, was mich erwartet, aber der Duft hat mich echt positiv überrascht. Riecht super frisch und kommt Aventus ziemlich nah. Hält ordentlich und der Preis ist einfach deutlich besser.“</p>",
             "author": "Michael T.",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 4,
             "show_verified_badge": true,
             "product": ""
@@ -1029,7 +1076,7 @@
             "review_image": "shopify://shop_images/magic_175_review.png",
             "content": "<p>„Einer meiner absoluten Lieblingsdüfte. War super schnell da und riecht einfach richtig gut.“</p>",
             "author": "Jonas Hartmann",
-            "date": " vor 2 Tagen",
+            "date": "vor 2 Tagen",
             "rating": 5,
             "show_verified_badge": true,
             "product": ""
@@ -1040,7 +1087,7 @@
           "settings": {
             "content": "<p>„Meine Freundin meinte direkt, dass ich gut rieche 😄 Seitdem benutze ich ihn fast jeden Tag.“</p>",
             "author": "Lukas Schneider",
-            "date": " vor 5 Tagen",
+            "date": "vor 5 Tagen",
             "rating": 4,
             "show_verified_badge": false,
             "product": ""
@@ -1051,7 +1098,7 @@
           "settings": {
             "content": "<p>„Am Anfang war ich etwas besorgt, weil sich die Lieferung verzögert hat. Aber als das Parfüm angekommen ist und sich der Duft erst mal gesetzt hat – wow, einfach unglaublich gut.“</p>",
             "author": "Lionel M.",
-            "date": " vor 7 Tagenen",
+            "date": "vor 7 Tagenen",
             "rating": 5,
             "show_verified_badge": true,
             "product": ""
@@ -1423,6 +1470,7 @@
     "manus_why_it_last_jW8Eag",
     "manus_comparison_Vdxngc",
     "image_and_text_EFE4gB",
+    "image_and_text_n6Xa4L",
     "popular_products_BptEUV",
     "massive_review_nBEgXq",
     "massive_review_i7YfR7",
