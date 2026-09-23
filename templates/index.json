@@ -205,7 +205,7 @@
       "name": "Popular Products",
       "settings": {
         "background_color": "#f7f7f7",
-        "heading": "BESTSELLERS",
+        "heading": "BESTSELLER",
         "subheading": "",
         "collection": "bestseller-singles",
         "show_all_button_text": "Alle Bestseller ansehen",
