@@ -356,8 +356,8 @@
             {%- endfor -%}
             {%- assign brand_slug = '' -%}
             {%- for t in p.tags -%}
-              {%- if t contains 'marque:' -%}
-                {%- assign brand_slug = t | remove: 'marque:' -%}
+              {%- if t contains 'marke:' -%}
+                {%- assign brand_slug = t | remove: 'marke:' -%}
                 {%- break -%}
               {%- endif -%}
             {%- endfor -%}
