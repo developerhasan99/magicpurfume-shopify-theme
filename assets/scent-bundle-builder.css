@@ -1,8 +1,3 @@
-/* !important, hide the offer timebar on the pag */
-#sections--23005488611586__offer_timebar_8kAUGX {
-  display: none !important;
-}
-
 .sbb {
   max-width: 1200px;
   margin: 0 auto;
