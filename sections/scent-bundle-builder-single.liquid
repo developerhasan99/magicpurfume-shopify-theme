@@ -354,6 +354,30 @@
               {%- assign vt = v.title | downcase | replace: ' ml', 'ml' -%}
               {%- if vt == variant_ml -%}{%- assign match = v -%}{%- break -%}{%- endif -%}
             {%- endfor -%}
+            {%- assign brand_slug = '' -%}
+            {%- for t in p.tags -%}
+              {%- if t contains 'marque:' -%}
+                {%- assign brand_slug = t | remove: 'marque:' -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- assign brand_name = '' -%}
+            {%- if brand_slug != '' -%}
+              {%- case brand_slug -%}
+                {%- when 'ysl' -%}
+                  {%- assign brand_name = 'YSL' -%}
+                {%- when 'jpgaultier' -%}
+                  {%- assign brand_name = 'Jean Paul Gaultier' -%}
+                {%- when 'lancome' -%}
+                  {%- assign brand_name = 'Lancôme' -%}
+                {%- else -%}
+                  {%- assign brand_words = brand_slug | split: '-' -%}
+                  {%- for w in brand_words -%}
+                    {%- assign brand_name = brand_name | append: w | capitalize | append: ' ' -%}
+                  {%- endfor -%}
+                  {%- assign brand_name = brand_name | strip -%}
+              {%- endcase -%}
+            {%- endif -%}
             {
               id: {{ p.id }},
               name: {{ p.title | json }},
@@ -362,8 +386,8 @@
               price: {{ match.price }},
               compareAt: {{ match.compare_at_price | default: 0 }},
               variantId: {{ match.id | json }},
-              brand: {{ p.metafields.custom.brand.value | join: '||' | json }},
-              gender: {{ p.metafields.custom.gender.value | join: '||' | json }},
+              brand: {{ brand_name | json }},
+              gender: {{ p.type | json }},
               occasion: {{ p.metafields.custom.occasion | json }}
             },
           {%- endfor -%}
@@ -440,9 +464,10 @@
           return Array.from(set).sort();
         },
         get genderOptions() {
+          var allowed = ['FÜR MÄNNER', 'FÜR FRAUEN'];
           var set = new Set();
-          this.products.forEach(function (p) { p.gender.split('||').forEach(function (g) { if (g) set.add(g); }); });
-          return Array.from(set).sort();
+          this.products.forEach(function (p) { p.gender.split('||').forEach(function (g) { if (allowed.indexOf(g) > -1) set.add(g); }); });
+          return allowed.filter(function (g) { return set.has(g); });
         },
         get occasionOptions() {
           var set = new Set();

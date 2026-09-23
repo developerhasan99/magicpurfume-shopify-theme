@@ -1,3 +1,8 @@
+/* !important, hide the offer timebar on the pag */
+#sections--23005488611586__offer_timebar_8kAUGX {
+  display: none !important;
+}
+
 .sbb {
   max-width: 1200px;
   margin: 0 auto;
@@ -527,7 +532,7 @@
 }
 @media screen and (max-width: 640px) {
   .sbb {
-    padding-top: 16px;
+    padding-top: 0px;
   }
   .sbb-builder {
     flex-direction: column;
