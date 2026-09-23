@@ -856,7 +856,7 @@
       "settings": {
         "background_color": "#fcfbf9",
         "heading": "Kunden bewerten",
-        "review_text": "Magic Parfume mit 4,6 Sterne. Bewertungen Ansehen",
+        "review_text": "Unsere Kunden bewerten Magic Perfume mit 4,6 von 5 Sternen.",
         "button_text": "Weitere Bewertungen anzeigen · Alle Düfte ansehen",
         "button_link": "",
         "padding_top": 72,
@@ -871,7 +871,7 @@
           "settings": {
             "heading": "Häufige Fragen · Warum sind eure Düfte so günstig?",
             "icon": "none",
-            "row_content": "<p>Wir konzentrieren uns auf den Duftinhalt. Kein luxuriöses Flakon, keine besondere Verpackung, keine teuren Läden & keine teuren Influencerdeals — ermöglichen dir luxuriös zu riechen, ohne das Budget zu sprengen.</p>",
+            "row_content": "<p>Wir konzentrieren uns auf den Duftinhalt. Kein luxuriöser Flakon, keine besondere Verpackung, keine teuren Läden & keine teuren Influencerdeals — ermöglichen dir luxuriös zu riechen, ohne das Budget zu sprengen.</p>",
             "page": ""
           }
         },
