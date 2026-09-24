@@ -28,6 +28,7 @@
         },
         "designer_price_VYNtA7": {
           "type": "designer_price",
+          "disabled": true,
           "settings": {}
         },
         "custom_liquid_wVgaRG": {
