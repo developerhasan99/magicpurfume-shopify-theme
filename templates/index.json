@@ -547,7 +547,7 @@
         "review_bjRzPy": {
           "type": "review",
           "settings": {
-            "content": "<p>\"Riecht sehr gut, es hat mich fasziniert\"</p>",
+            "content": "<p>\"Riecht richtig gut, bin begeistert.\"</p>",
             "author": "Castillo B.",
             "date": "vor 3 Monaten",
             "rating": 5,
@@ -697,6 +697,7 @@
         },
         "review_GbhyC3": {
           "type": "review",
+          "disabled": true,
           "settings": {
             "content": "<p>\"Omg ich liebte es Wow! Genau wie das Original und es hält den ganzen Tag!❤️‍🔥❤️‍🔥\"</p>",
             "author": "شيطانة YT",
