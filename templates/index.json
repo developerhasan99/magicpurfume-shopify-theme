@@ -663,6 +663,7 @@
         },
         "review_YtFw34": {
           "type": "review",
+          "disabled": true,
           "settings": {
             "content": "<p>\"Das Produkt kam schön verpackt an. Das Parfüm war nicht kaputt, ist nicht ausgelaufen und war in gutem Zustand. Der Duft ist perfekt und roch nicht schlecht. Ich liebe es, hohe Qualität\"</p>",
             "author": "Roxanne S",
