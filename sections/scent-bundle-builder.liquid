@@ -7,11 +7,13 @@
   assign t1_free = st.tier_1_free | plus: 0
   assign t1_paid = t1_total | minus: t1_free
   assign t1_ribbon = 'Kaufe ' | append: t1_paid | append: ', erhalte ' | append: t1_free | append: ' gratis'
+  assign t1_image_text = st.tier_1_image_text | default: t1_ribbon
 
   assign t2_total = st.tier_2_total | plus: 0
   assign t2_free = st.tier_2_free | plus: 0
   assign t2_paid = t2_total | minus: t2_free
   assign t2_ribbon = 'Kaufe ' | append: t2_paid | append: ', erhalte ' | append: t2_free | append: ' gratis'
+  assign t2_image_text = st.tier_2_image_text | default: t2_ribbon
 
   assign eligible_handles = ''
   for p in grid_pool.products
@@ -318,8 +320,8 @@
         pageSize: 8,
         picks: [],
         tiers: [
-          { total: {{ t1_total }}, free: {{ t1_free }}, ribbon: {{ t1_ribbon | json }}, label: {{ st.tier_1_label | json }} },
-          { total: {{ t2_total }}, free: {{ t2_free }}, ribbon: {{ t2_ribbon | json }}, label: {{ st.tier_2_label | json }} }
+          { total: {{ t1_total }}, free: {{ t1_free }}, ribbon: {{ t1_image_text | json }}, label: {{ st.tier_1_label | json }} },
+          { total: {{ t2_total }}, free: {{ t2_free }}, ribbon: {{ t2_image_text | json }}, label: {{ st.tier_2_label | json }} }
         ],
         products: [
           {%- for p in grid_pool.products -%}
@@ -532,6 +534,12 @@
         "default": 1
       },
       {
+        "type": "text",
+        "id": "tier_1_image_text",
+        "label": "Image offer text",
+        "info": "Shown on product images. Leave blank to use \"Kaufe X, erhalte Y gratis\""
+      },
+      {
         "type": "header",
         "content": "Offer 2"
       },
@@ -565,6 +573,12 @@
         "id": "tier_2_free",
         "label": "Free bottles",
         "default": 2
+      },
+      {
+        "type": "text",
+        "id": "tier_2_image_text",
+        "label": "Image offer text",
+        "info": "Shown on product images. Leave blank to use \"Kaufe X, erhalte Y gratis\""
       },
       {
         "type": "header",
