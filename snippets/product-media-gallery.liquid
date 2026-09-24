@@ -2,7 +2,12 @@
   {% assign product = product_param %}
 {% endif %}
 
-{% assign de_marketing_images = shop.metaobjects['marketing_images']['german'].images.value %}
+{% liquid
+  # Products tagged 'own_gallery' show only their own images, no marketing images
+  unless product.tags contains 'own_gallery'
+    assign de_marketing_images = shop.metaobjects['marketing_images']['german'].images.value
+  endunless
+%}
 
 <div class="sticky top-6 !mt-0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
