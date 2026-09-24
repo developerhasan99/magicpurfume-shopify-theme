@@ -26,7 +26,7 @@
 
       {% if product.compare_at_price > product.price %}
         <span class="text-gray-500 font-semibold line-through compare-price">
-          Designerpreis: {{ product.compare_at_price | money }}
+          Regulärer Preis: {{ product.compare_at_price | money }}
         </span>
       {% endif %}
     </div>
