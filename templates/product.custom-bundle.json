@@ -109,39 +109,12 @@
             "page": ""
           }
         },
-        "collapsible_tab_T6Fk9z": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Handelt es sich um ein Duftwasser?",
-            "icon": "none",
-            "content": "<p>Nein, es ist ein Eau de Parfum – es enthält zwischen 19 % und 21 % Duftöl, je nach Parfüm. Eau de Toilette enthält zum Beispiel zwischen 5 und 15 %.</p>",
-            "page": ""
-          }
-        },
         "collapsible_tab_GUrz86": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Wie lange hält das Parfüm?",
             "icon": "none",
             "content": "<p>Das Parfüm hält je nach Person und Anwendungsart unterschiedlich lange an. Auf die Haut gesprüht hält es dank unserer Formel und 19–21 % Parfümölkonzentration 8 bis sogar 12 Stunden und länger. Nach einer längeren Zeitspanne verblasst der Duft.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_tab_TKfWP3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Unterscheidet sich der inspirierte Duft?",
-            "icon": "none",
-            "content": "<p>Nein, dieser Duft ist von ähnlichen Duftnoten inspiriert und gehört zur gleichen Duftfamilie.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_tab_HiNKBa": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Was bedeutet 19% Parfüm?",
-            "icon": "none",
-            "content": "<p>Es bedeutet, dass der Inhalt des Flakons zwischen 19% und 21 % Parfümöl enthält. Designerflakons enthalten zwischen 10 und 15 % Parfümöl für Eau de Toilette.</p>",
             "page": ""
           }
         },
@@ -193,10 +166,7 @@
         "custom_liquid_aeXkRF",
         "collapsible_tab_FAAFhb",
         "collapsible_tab_bKn87j",
-        "collapsible_tab_T6Fk9z",
         "collapsible_tab_GUrz86",
-        "collapsible_tab_TKfWP3",
-        "collapsible_tab_HiNKBa",
         "collapsible_tab_Qn8c4p",
         "product_reviews_W3CkbE"
       ],
