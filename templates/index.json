@@ -882,7 +882,7 @@
           "settings": {
             "heading": "Sind eure Düfte Eau de Parfum?",
             "icon": "none",
-            "row_content": "<p>Nein, es ist ein Eau de Parfum – es enthält zwischen 19 % und 21 % Duftöl, je nach Parfüm. Eau de Toilette enthält zum Beispiel zwischen 5 und 15 %.</p>",
+            "row_content": "<p>Ja, es ist ein Eau de Parfum mit 19–21 % Parfümöl, je nach Duft. Ein Eau de Toilette enthält zum Vergleich nur 5–15 %.</p>",
             "page": ""
           }
         },
