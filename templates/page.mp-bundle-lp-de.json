@@ -655,7 +655,7 @@
         "ours_brand": "MagyX",
         "col2_label": "Designer-Parfüm",
         "cta_pill": "Qualität ohne Kompromisse",
-        "cta_button": "Spare bis zu 95% bei deinem Designerduft",
+        "cta_button": "6 Düfte auswählen",
         "cta_url": "#mp-picker",
         "cta_micro": "60 Tage Geld-zurück-Garantie."
       }
@@ -755,7 +755,7 @@
           "type": "tile",
           "settings": {
             "title": "{count} Düfte verfügbar",
-            "text": "Bestseller, Klassiker und eingestellte Kollektionen, die du geliebt hast, alles da!"
+            "text": "Entdecke die verfügbaren Düfte im Set."
           }
         },
         "tile-4": {
@@ -776,7 +776,7 @@
           "type": "tile",
           "settings": {
             "title": "60 Tage Geld-zurück-Garantie",
-            "text": "Bestell es, riech es, leb damit, dann entscheide."
+            "text": "Rückgabe und Erstattung: Bedingungen ansehen"
           }
         },
         "card-7": {
@@ -817,8 +817,8 @@
       ],
       "settings": {
         "background": "cream2",
-        "heading": "Was dir eine Flasche Magic Perfume wirklich bringt",
-        "sub": "Sechs Dinge, die gleich bleiben, egal welche Düfte du wählst.",
+        "heading": "",
+        "sub": "",
         "center_image": "shopify://shop_images/mp-hero-mobile-burodufte.png",
         "center_alt": "Eine einzelne 50-ml-Flasche von Magic Perfume",
         "trust_heading": "Drei Dinge, die wir dir schriftlich geben",
