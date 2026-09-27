@@ -1,15 +1,6 @@
-{%- comment -%} MP LP · Hero. Rotator blocks feed the JSON list the JS reads; data-image-map/data-family-map/data-product-map/data-brand-map stay owned by the core section. {%- endcomment -%}
+{%- comment -%} MP LP · Hero. Static version — no rotator. {%- endcomment -%}
 {%- liquid
-  assign our_price = section.settings.our_price | default: 10
-  assign rotator_blocks = section.blocks | where: 'type', 'rotator'
   assign check_blocks = section.blocks | where: 'type', 'item'
-  assign first_rotator = rotator_blocks.first
-  assign first_name = ''
-  assign first_amount = 0
-  if first_rotator
-    assign first_name = first_rotator.settings.name
-    assign first_amount = first_rotator.settings.price | default: 0 | minus: our_price | floor
-  endif
   assign hero_src = section.settings.image_url
   assign hero_desktop_src = hero_src
   if section.settings.image != blank
@@ -29,12 +20,11 @@
   <div class="mp-container mp-hero__grid">
     <div class="mp-hero__copy">
       <div class="mp-hero__rating"><span class="mp-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> {{ section.settings.rating_text | escape }}</div>
-      <h1 class="mp-rot" data-rotator>
-        <span class="mp-rot__line">{{ section.settings.prefix | escape }} <span class="mp-rot__v" data-rot-save>&euro;{{ first_amount }}</span></span>
+      <h1 class="mp-rot">
+        <span class="mp-rot__line">{{ section.settings.prefix | escape }}</span>
         <span class="mp-rot__line">{{ section.settings.middle | escape }}</span>
-        <span class="mp-rot__line" data-rot-fit>{{ section.settings.suffix | escape }} <span class="mp-rot__v" data-rot-name>{{ first_name }}</span></span>
+        <span class="mp-rot__line">{{ section.settings.suffix | escape }}</span>
       </h1>
-      <script type="application/json" data-rotator-list>[{%- for block in rotator_blocks -%}{"name":{{ block.settings.name | default: '' | json }},"price":{{ block.settings.price | default: 0 }},"size":{{ block.settings.size | default: '' | json }},"no":{{ block.settings.no | default: '' | json }}}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]</script>
       <ul class="mp-checks">
         {%- for block in check_blocks -%}
         <li {{ block.shopify_attributes }}><span class="mp-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5l2.6 2.5L10 3.5"/></svg></span>{{ block.settings.text | escape }}</li>
@@ -67,10 +57,9 @@
   "settings": [
     { "type": "header", "content": "Copy" },
     { "type": "text", "id": "rating_text", "label": "Rating line (text after the stars)", "default": "Recommended by over 10,000 scent lovers with a 4.6/5 rating" },
-    { "type": "text", "id": "prefix", "label": "Rotator prefix", "default": "Save" },
-    { "type": "text", "id": "middle", "label": "Rotator middle line", "default": "with Magic Perfume" },
-    { "type": "text", "id": "suffix", "label": "Rotator suffix", "default": "instead of" },
-    { "type": "number", "id": "our_price", "label": "Our price (subtracted from each rotator price for the save amount)", "default": 10 },
+    { "type": "text", "id": "prefix", "label": "Heading line 1", "default": "Save up to 50%" },
+    { "type": "text", "id": "middle", "label": "Heading line 2", "default": "with Magic Perfume" },
+    { "type": "text", "id": "suffix", "label": "Heading line 3", "default": "compared to designer originals" },
     { "type": "header", "content": "CTA" },
     { "type": "text", "id": "pill", "label": "Pill text", "default": "Choose from {count} designer inspired scents", "info": "Tokens: {count}" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Save 50% with Scent Wardrobe bundle" },
@@ -87,12 +76,6 @@
   "blocks": [
     { "type": "item", "name": "Check item", "settings": [
       { "type": "text", "id": "text", "label": "Text", "default": "Resemblance backed by over 10,000 verified reviews" }
-    ] },
-    { "type": "rotator", "name": "Rotator entry", "settings": [
-      { "type": "text", "id": "name", "label": "Designer perfume name (censored)", "default": "Sau*age Elixir" },
-      { "type": "number", "id": "price", "label": "Designer price (EUR)", "default": 225 },
-      { "type": "text", "id": "size", "label": "Size label", "default": "designer bottle" },
-      { "type": "text", "id": "no", "label": "Magic Perfume number", "default": "No. 366" }
     ] }
   ],
   "presets": [{
@@ -101,22 +84,7 @@
       { "type": "item", "settings": { "text": "Resemblance backed by over 10,000 verified reviews" } },
       { "type": "item", "settings": { "text": "Made with Clean Label Strategy, without harsh and harmful chemicals" } },
       { "type": "item", "settings": { "text": "21% fragrance oil, 8 to 12 hours on skin" } },
-      { "type": "item", "settings": { "text": "Vegan, cruelty free, made in Europe" } },
-      { "type": "rotator", "settings": { "name": "Sau*age Elixir", "price": 225, "size": "designer bottle", "no": "No. 366" } },
-      { "type": "rotator", "settings": { "name": "Inv**tus", "price": 325, "size": "designer bottle", "no": "No. 228" } },
-      { "type": "rotator", "settings": { "name": "Black Op*um", "price": 345, "size": "designer bottle", "no": "No. 132" } },
-      { "type": "rotator", "settings": { "name": "One Mil*ion", "price": 430, "size": "designer bottle", "no": "No. 275" } },
-      { "type": "rotator", "settings": { "name": "Li*re", "price": 285, "size": "designer bottle", "no": "No. 034" } },
-      { "type": "rotator", "settings": { "name": "Fucking Fab**ous", "price": 345, "size": "designer bottle", "no": "No. 232" } },
-      { "type": "rotator", "settings": { "name": "La Vie Est Be*le", "price": 345, "size": "designer bottle", "no": "No. 101" } },
-      { "type": "rotator", "settings": { "name": "Al*en", "price": 245, "size": "designer bottle", "no": "No. 004" } },
-      { "type": "rotator", "settings": { "name": "Le M*le", "price": 355, "size": "designer bottle", "no": "No. 247" } },
-      { "type": "rotator", "settings": { "name": "Sca*dal", "price": 345, "size": "designer bottle", "no": "No. 192" } },
-      { "type": "rotator", "settings": { "name": "J'a*ore", "price": 235, "size": "designer bottle", "no": "No. 159" } },
-      { "type": "rotator", "settings": { "name": "Ar*ani Code", "price": 260, "size": "designer bottle", "no": "No. 260" } },
-      { "type": "rotator", "settings": { "name": "Hyp**tic Poison", "price": 345, "size": "designer bottle", "no": "No. 145" } },
-      { "type": "rotator", "settings": { "name": "Good Girl Ve*vet", "price": 225, "size": "designer bottle", "no": "No. 461" } },
-      { "type": "rotator", "settings": { "name": "Ac*ua Di Gio", "price": 285, "size": "designer bottle", "no": "No. 221" } }
+      { "type": "item", "settings": { "text": "Vegan, cruelty free, made in Europe" } }
     ]
   }]
 }
