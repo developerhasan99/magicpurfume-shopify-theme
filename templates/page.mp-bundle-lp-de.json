@@ -381,7 +381,7 @@
         "background": "white",
         "heading": "Was steckt im Preis eines Parfüms? Du bezahlst nicht nur den Duft.",
         "sub": "Auch Verpackung, Vertrieb und Werbung können den Preis mitbestimmen.",
-        "diff": "Dein Duft. Dein Budget. Ein hoher Preis allein sagt noch nicht, ob ein Duft zu dir passt. Bei Magic wählst du sechs Düfte à 50 ml für 60,00 € – also 10,00 € pro Duft.",
+        "diff": "Dein Duft. Dein Budget. Ein hoher Preis allein sagt noch nicht, ob ein Duft zu dir passt. Bei Magic wählst du sechs Düfte à 50 ml für {price} – also {per} pro Duft.",
         "cta_button": "Spar den Aufschlag. Behalt den Duft.",
         "cta_url": "#mp-picker",
         "cta_micro": "60 Tage Geld-zurück-Garantie.",
@@ -1195,7 +1195,7 @@
           "type": "faq",
           "settings": {
             "question": "Warum sind eure Parfüms so günstig?",
-            "answer": "Wir stecken das Geld in das, was in der Flasche ist. Kein Luxusflakon, keine besondere Verpackung, keine teuren Läden und keine teuren Influencer-Deals. So riechst du luxuriös, ohne dein Budget zu sprengen.",
+            "answer": "&nbsp;Warum kostet das Set {price} ? Nicht nur der Duft bestimmt den Preis eines Parfüms. Auch Verpackung, Vertrieb und Werbung spielen eine Rolle. Bei diesem Angebot wählst du sechs Düfte à 50 ml für {price} &nbsp;selbst aus. &nbsp;",
             "open": true
           }
         },
@@ -1277,7 +1277,7 @@
       ],
       "settings": {
         "background": "cream",
-        "heading": "Alles andere, was du dich fragst",
+        "heading": "Fragen zu deinem Duftset.",
         "sub": "Klare Antworten, kein Kleingedrucktes.",
         "cta_button": "Mit Magic Perfume bis zu €2.000 sparen",
         "cta_url": "#mp-picker",
