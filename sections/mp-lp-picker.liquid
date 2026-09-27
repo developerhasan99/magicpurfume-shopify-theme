@@ -67,9 +67,9 @@
             <button class="mp-search__clear" type="button" data-search-clear aria-label="{{ section.settings.search_clear_aria | escape }}" hidden>&times;</button>
           </div>
         </div>
-        <div class="mp-picker__count" data-grid-count aria-live="polite">Showing 0 scents</div>
+        <div class="mp-picker__count" data-grid-count aria-live="polite" data-grid-count-template="{{ section.settings.grid_count_text | escape }}">{{ section.settings.grid_count_text | escape }}</div>
         <div class="mp-cards" data-cards></div>
-        <div class="mp-more" data-more-wrap hidden><button class="mp-tab" type="button" data-more>Show more scents</button></div>
+        <div class="mp-more" data-more-wrap hidden><button class="mp-tab" type="button" data-more data-more-template="{{ section.settings.load_more_text | escape }}">{{ section.settings.load_more_text | escape }}</button></div>
         </div>
       </div>
     </div>
@@ -117,7 +117,10 @@
     { "type": "header", "content": "Search" },
     { "type": "text", "id": "search_placeholder", "label": "Search placeholder", "default": "Search brand or scent, e.g. Dior" },
     { "type": "text", "id": "search_aria", "label": "Search aria-label", "default": "Search scents by brand, name or note" },
-    { "type": "text", "id": "search_clear_aria", "label": "Search clear aria-label", "default": "Clear search" }
+    { "type": "text", "id": "search_clear_aria", "label": "Search clear aria-label", "default": "Clear search" },
+    { "type": "header", "content": "Grid count & load more" },
+    { "type": "text", "id": "grid_count_text", "label": "Grid count text", "default": "12 von 77 Düften angezeigt", "info": "JS updates this with live numbers as filters/search change." },
+    { "type": "text", "id": "load_more_text", "label": "Load more button text", "default": "Weitere 65 Düfte anzeigen", "info": "JS updates the number as more scents load." }
   ],
   "presets": [{ "name": "MP LP · Picker" }]
 }

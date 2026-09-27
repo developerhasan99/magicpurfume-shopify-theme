@@ -1210,7 +1210,7 @@
         "faq-3": {
           "type": "faq",
           "settings": {
-            "question": "Wie lange hält das Parfüm?",
+            "question": "Sind die Düfte Eau de Parfum?",
             "answer": "Auf die Haut gesprüht hält es 8 bis 12 Stunden und länger, dank unserer Formel und der Konzentration von 21% Parfümöl.",
             "open": false
           }
@@ -1226,7 +1226,7 @@
         "faq-5": {
           "type": "faq",
           "settings": {
-            "question": "Was bedeutet 21% Parfüm?",
+            "question": "Was ist ein Duftzwilling?",
             "answer": "Das heißt, der Inhalt der Flasche enthält 21% Parfümöl.",
             "open": false
           }
@@ -1242,7 +1242,7 @@
         "faq-7": {
           "type": "faq",
           "settings": {
-            "question": "Wie stelle ich meine Box zusammen?",
+            "question": "Wie stelle ich mein Set zusammen?",
             "answer": "Wähle sechs beliebige Flaschen aus den {count} Düften oben, für Damen, für Herren oder gemischt. Jede Flasche ist 50 ml. Sind alle sechs Plätze voll, tippst du auf den Button und gehst direkt zur Kasse.",
             "open": false
           }
@@ -1250,7 +1250,7 @@
         "faq-8": {
           "type": "faq",
           "settings": {
-            "question": "Wann verschickt ihr?",
+            "question": "Wann kommt meine Bestellung an?",
             "answer": "In der Regel verschicken wir am zweiten Werktag.",
             "open": false
           }
@@ -1258,7 +1258,7 @@
         "faq-9": {
           "type": "faq",
           "settings": {
-            "question": "Und wenn ich es zurückschicken will?",
+            "question": "Wie funktioniert die Rückgabe?",
             "answer": "Ungeöffnete Flaschen gehen innerhalb von 60 Tagen nach Lieferung zurück. Die Rückerstattung bearbeiten wir innerhalb von 14 Werktagen, nachdem das Paket bei uns angekommen ist. Schreib an hello@magicperfume.co.",
             "open": false
           }
@@ -1288,11 +1288,11 @@
       "type": "mp-lp-picker",
       "settings": {
         "background": "white",
-        "heading": "Bau deine sechs",
-        "sub": "Tipp auf eine Flasche, dann landet sie in der Box. Sechs Plätze, beliebig gemischt aus Damen- und Herrendüften.",
+        "heading": "Stelle dein 6er-Set zusammen",
+        "sub": "Wähle 6 Düfte aus. Mit „Hinzufügen\" legst du einen Duft in dein Set. Damen-, Herren- und Unisexdüfte sind frei kombinierbar.",
         "preview_image_url": "https://magicperfume.co/cdn/shop/files/magic_header_1.png?v=1772469544",
         "preview_alt": "Magic Perfume Flaschen aufgereiht auf einem Tisch",
-        "tray_heading": "Deine Box",
+        "tray_heading": "Dein Set",
         "tray_empty": "Sechs freie Plätze. Wähl unten deine erste Flasche.",
         "bonus_ship_title": "Gratisversand",
         "show_bonus_mystery": false,
@@ -1313,7 +1313,7 @@
         "tab_woody": "Holzig",
         "tab_amber": "Warm & würzig",
         "tab_fruity": "Fruchtig",
-        "search_placeholder": "Marke oder Duft suchen, z. B. Dior",
+        "search_placeholder": "Duftname, Marke oder Nummer suchen",
         "search_aria": "Düfte nach Marke, Name oder Note suchen",
         "search_clear_aria": "Suche löschen"
       }
