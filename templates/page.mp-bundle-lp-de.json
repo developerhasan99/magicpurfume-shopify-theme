@@ -463,7 +463,7 @@
       ],
       "settings": {
         "background": "cream2",
-        "heading": "Riecht das wirklich wie das Original?",
+        "heading": "Was Kundinnen und Kunden sagen",
         "sub": "In ihren eigenen Worten, von der Bewertungsseite.",
         "stars_label": "{rating} von 5 Sternen",
         "prev_label": "Vorherige Bewertungen",
@@ -514,7 +514,13 @@
           "settings": {
             "icon": "drop",
             "title": "21% Parfümöl",
-            "text": "Duftdetails ansehen"
+            "text": "Eau-de-Parfum-Stärke und bis zu 12 Stunden Haltbarkeit in jeder einzelnen Flasche."
+          }
+        },
+        "paragraph_3CBeR3": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>It doesn’t. Longevity comes from the concentration of perfume oil.<br/>That does not mean more is always better, though.</p>"
           }
         },
         "pillar-8": {
@@ -522,7 +528,7 @@
           "settings": {
             "icon": "globe",
             "title": "Hergestellt in einem EU-Dufthaus",
-            "text": "So funktioniert die Rückgabe"
+            "text": "Für unerreichte Ähnlichkeit. Du glaubst es nicht? Dafür gibt es unsere 60 Tage Geld-zurück-Garantie."
           }
         },
         "pillar-9": {
@@ -542,6 +548,7 @@
         "paragraph-5",
         "paragraph-6",
         "pillar-7",
+        "paragraph_3CBeR3",
         "pillar-8",
         "pillar-9"
       ],
@@ -649,7 +656,7 @@
       ],
       "settings": {
         "background": "white",
-        "heading": "Eine Designerflasche oder sechs von uns",
+        "heading": "Dein Duft. Ohne Designerpreis.",
         "sub": "Einer der wenigen, die ehrlich und transparent geblieben sind.",
         "ours_image": "shopify://shop_images/711.webp",
         "ours_image_url": "https://magicperfume.co/cdn/shop/files/magic_header_1.png?v=1772469544",
