@@ -1,4 +1,4 @@
-{%- comment -%} MP LP · Story + pillars. Body copy and pillars are blocks; icons render via a case, same pattern as mp-lp-band. {%- endcomment -%}
+{%- comment -%} MP LP · Story + pillars. Body copy and pillars are blocks; icons render via a case, same pattern as mp-lp-band. Middle pillar becomes a link when exactly 3 pillars exist and its link_url is set. {%- endcomment -%}
 {%- liquid
   assign bg_class = ''
   if section.settings.background == 'cream'
@@ -35,7 +35,32 @@
       </div>
       <ul class="mp-pillars" style="text-align:left">
         {%- for block in pillar_blocks -%}
-        <li {{ block.shopify_attributes }}><span class="mp-pillars__ico">{%- case block.settings.icon -%}{%- when 'drop' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>{%- when 'globe' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>{%- when 'leaf' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-8.5 0-14 4.5-14 12 0 1.6.3 3 .9 4.2C9.4 14.3 13.6 9.8 20 4z"/><path d="M6.9 20.2c2.8-4.9 6.4-8.6 11.1-11.4"/></svg>{%- endcase -%}</span><div class="mp-pillars__txt"><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p></div></li>
+        {%- liquid
+          assign is_middle_of_three = false
+          if pillar_blocks.size == 3 and forloop.index == 2 and block.settings.link_url != blank
+            assign is_middle_of_three = true
+          endif
+          assign icon_svg = ''
+          case block.settings.icon
+            when 'drop'
+              assign icon_svg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>'
+            when 'globe'
+              assign icon_svg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>'
+            when 'leaf'
+              assign icon_svg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-8.5 0-14 4.5-14 12 0 1.6.3 3 .9 4.2C9.4 14.3 13.6 9.8 20 4z"/><path d="M6.9 20.2c2.8-4.9 6.4-8.6 11.1-11.4"/></svg>'
+          endcase
+        -%}
+        <li {{ block.shopify_attributes }}>
+          {%- if is_middle_of_three -%}
+          <a class="mp-pillars__link" href="{{ block.settings.link_url }}" style="display:flex;align-items:flex-start;gap:inherit;color:inherit;text-decoration:none">
+            <span class="mp-pillars__ico">{{ icon_svg }}</span>
+            <div class="mp-pillars__txt"><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p></div>
+          </a>
+          {%- else -%}
+          <span class="mp-pillars__ico">{{ icon_svg }}</span>
+          <div class="mp-pillars__txt"><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p></div>
+          {%- endif -%}
+        </li>
         {%- endfor -%}
       </ul>
     </div>
@@ -79,7 +104,8 @@
     { "type": "pillar", "name": "Pillar", "settings": [
       { "type": "select", "id": "icon", "label": "Icon", "options": [ { "value": "drop", "label": "Drop" }, { "value": "globe", "label": "Globe" }, { "value": "leaf", "label": "Leaf" } ], "default": "drop" },
       { "type": "text", "id": "title", "label": "Title", "default": "21% fragrance oil" },
-      { "type": "text", "id": "text", "label": "Text", "default": "Eau de Parfum strength and up to 12 hours of longevity in every single bottle." }
+      { "type": "text", "id": "text", "label": "Text", "default": "Eau de Parfum strength and up to 12 hours of longevity in every single bottle." },
+      { "type": "url", "id": "link_url", "label": "Link URL (only used if this is the middle pillar of exactly 3)", "info": "Only applied when there are exactly 3 pillars and this one is second. Leave empty for no link." }
     ] }
   ],
   "presets": [{
