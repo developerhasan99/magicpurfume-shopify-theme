@@ -531,7 +531,7 @@
             "icon": "globe",
             "title": "Hergestellt in einem EU-Dufthaus",
             "text": "So funktioniert die Rückgabe",
-            "link_url": ""
+            "link_url": "https://magicperfume.co/policies/refund-policy"
           }
         },
         "pillar-9": {
@@ -580,13 +580,11 @@
         "row-1": {
           "type": "row",
           "settings": {
-            "label": "Was du zahlst",
+            "label": "Preis pro 50 ml",
             "ours": "{per} pro Flasche, in der Box",
             "ours_mark": "yes",
-            "theirs": "Ab €100 pro Flasche",
-            "theirs_mark": "no",
-            "dupes": "€18 bis €50 pro Flasche",
-            "dupes_mark": "neutral"
+            "theirs": "Ab €100",
+            "theirs_mark": "no"
           }
         },
         "row-2": {
@@ -596,33 +594,27 @@
             "ours": "21% Parfümöl, Eau de Parfum",
             "ours_mark": "yes",
             "theirs": "5 bis 15%",
-            "theirs_mark": "no",
-            "dupes": "Alles bis 40%, oft nicht angegeben",
-            "dupes_mark": "neutral"
+            "theirs_mark": "no"
           }
         },
         "row-3": {
           "type": "row",
           "settings": {
             "label": "Wie lange es hält",
-            "ours": "8 bis 12 Stunden",
+            "ours": "8 bis 12",
             "ours_mark": "yes",
-            "theirs": "3 bis 5 Stunden",
-            "theirs_mark": "no",
-            "dupes": "2 bis 12 Stunden",
-            "dupes_mark": "neutral"
+            "theirs": "3 bis 5",
+            "theirs_mark": "no"
           }
         },
         "row-4": {
           "type": "row",
           "settings": {
-            "label": "Clean Label",
-            "ours": "Vegan, ohne Tierversuche, Phthalate oder Parabene",
+            "label": "Marke & Flakon",
+            "ours": "Duft im Fokus · schlichter Flakon",
             "ours_mark": "yes",
-            "theirs": "Je nach Marke, lies die Packung",
-            "theirs_mark": "neutral",
-            "dupes": "Selten angegeben",
-            "dupes_mark": "neutral"
+            "theirs": "Designername · markentypischer Flakon",
+            "theirs_mark": "neutral"
           }
         },
         "row-5": {
@@ -632,9 +624,7 @@
             "ours": "21% Parfümöl, echten Duft ohne schädliche Chemikalien",
             "ours_mark": "yes",
             "theirs": "Boutique, Promi-Werbung, schicker Flakon, Verpackung, 5 bis 15% Parfümöl",
-            "theirs_mark": "no",
-            "dupes": "Flasche, Instagram-Promi, manchmal Versand aus China",
-            "dupes_mark": "neutral"
+            "theirs_mark": "no"
           }
         },
         "row-6": {
@@ -644,9 +634,7 @@
             "ours": "60 Tage",
             "ours_mark": "yes",
             "theirs": "14 Tage laut Gesetz, ungeöffnet",
-            "theirs_mark": "no",
-            "dupes": "14 bis 30 Tage, ungeöffnet",
-            "dupes_mark": "no"
+            "theirs_mark": "no"
           }
         }
       },
@@ -666,7 +654,6 @@
         "ours_image_url": "https://magicperfume.co/cdn/shop/files/magic_header_1.png?v=1772469544",
         "ours_brand": "MagyX",
         "col2_label": "Designer-Parfüm",
-        "col3_label": "Duftzwilling-Marken",
         "cta_pill": "Qualität ohne Kompromisse",
         "cta_button": "Spare bis zu 95% bei deinem Designerduft",
         "cta_url": "#mp-picker",
