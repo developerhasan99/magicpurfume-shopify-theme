@@ -210,7 +210,8 @@
         "item-4"
       ],
       "settings": {
-        "rating_text": "Von über 10.000 Duftliebhabern empfohlen, Bewertung 4,7/5",
+        "rating_text": "Kundenbewertungen ansehen",
+        "rating_link": "https://www.trustpilot.com/review/magicperfume.co",
         "prefix": "6 Lieblingsdüfte.",
         "middle": "Dein Set.",
         "suffix": "60.00 €.",
@@ -514,7 +515,8 @@
           "settings": {
             "icon": "drop",
             "title": "21% Parfümöl",
-            "text": "Eau-de-Parfum-Stärke und bis zu 12 Stunden Haltbarkeit in jeder einzelnen Flasche."
+            "text": "Eau-de-Parfum-Stärke und bis zu 12 Stunden Haltbarkeit in jeder einzelnen Flasche.",
+            "link_url": ""
           }
         },
         "paragraph_3CBeR3": {
@@ -528,7 +530,8 @@
           "settings": {
             "icon": "globe",
             "title": "Hergestellt in einem EU-Dufthaus",
-            "text": "Für unerreichte Ähnlichkeit. Du glaubst es nicht? Dafür gibt es unsere 60 Tage Geld-zurück-Garantie."
+            "text": "So funktioniert die Rückgabe",
+            "link_url": ""
           }
         },
         "pillar-9": {
@@ -536,7 +539,8 @@
           "settings": {
             "icon": "leaf",
             "title": "Clean Label",
-            "text": "Produziert nach EU-Standards. Vegan und tierversuchsfrei. Frei von Phthalaten und Parabenen."
+            "text": "Produziert nach EU-Standards. Vegan und tierversuchsfrei. Frei von Phthalaten und Parabenen.",
+            "link_url": ""
           }
         }
       },

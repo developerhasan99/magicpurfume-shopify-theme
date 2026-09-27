@@ -1,4 +1,4 @@
-{%- comment -%} MP LP · Story + pillars. Body copy and pillars are blocks; icons render via a case, same pattern as mp-lp-band. Any pillar with link_url filled renders as a link. {%- endcomment -%}
+{%- comment -%} MP LP · Story + pillars. Body copy and pillars are blocks; icons render via a case, same pattern as mp-lp-band. Pillar's text field becomes a link when link_url is filled — only that text, not the whole pillar. {%- endcomment -%}
 {%- liquid
   assign bg_class = ''
   if section.settings.background == 'cream'
@@ -51,15 +51,15 @@
           endcase
         -%}
         <li {{ block.shopify_attributes }}>
-          {%- if has_link -%}
-          <a class="mp-pillars__link" href="{{ block.settings.link_url }}" style="display:flex;align-items:flex-start;gap:inherit;color:inherit;text-decoration:none">
-            <span class="mp-pillars__ico">{{ icon_svg }}</span>
-            <div class="mp-pillars__txt"><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p></div>
-          </a>
-          {%- else -%}
           <span class="mp-pillars__ico">{{ icon_svg }}</span>
-          <div class="mp-pillars__txt"><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p></div>
-          {%- endif -%}
+          <div class="mp-pillars__txt">
+            <h3>{{ block.settings.title | escape }}</h3>
+            {%- if has_link -%}
+            <p><a href="{{ block.settings.link_url }}" style="color:inherit;text-decoration:underline">{{ block.settings.text | escape }}</a></p>
+            {%- else -%}
+            <p>{{ block.settings.text | escape }}</p>
+            {%- endif -%}
+          </div>
         </li>
         {%- endfor -%}
       </ul>
@@ -105,7 +105,7 @@
       { "type": "select", "id": "icon", "label": "Icon", "options": [ { "value": "drop", "label": "Drop" }, { "value": "globe", "label": "Globe" }, { "value": "leaf", "label": "Leaf" } ], "default": "drop" },
       { "type": "text", "id": "title", "label": "Title", "default": "21% fragrance oil" },
       { "type": "text", "id": "text", "label": "Text", "default": "Eau de Parfum strength and up to 12 hours of longevity in every single bottle." },
-      { "type": "url", "id": "link_url", "label": "Link URL", "info": "If filled, this pillar becomes a clickable link. Leave empty for no link." }
+      { "type": "url", "id": "link_url", "label": "Text link URL", "info": "If filled, only the text below the title becomes a clickable link. Leave empty for no link." }
     ] }
   ],
   "presets": [{
