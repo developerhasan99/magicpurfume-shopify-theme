@@ -187,13 +187,13 @@
         "item-2": {
           "type": "item",
           "settings": {
-            "text": "Hergestellt nach Clean-Label-Strategie, ohne aggressive und schädliche Chemikalien"
+            "text": "Inhaltsstoffe zum jeweiligen Duft ansehen"
           }
         },
         "item-3": {
           "type": "item",
           "settings": {
-            "text": "21% Parfümöl, 8 bis 12 Stunden auf der Haut"
+            "text": "6 x 50 ml Eau de Parfum · frei kombinierbar"
           }
         },
         "item-4": {
@@ -201,176 +201,25 @@
           "settings": {
             "text": "Vegan, tierversuchsfrei, hergestellt in Europa"
           }
-        },
-        "rotator-5": {
-          "type": "rotator",
-          "settings": {
-            "name": "Sau*age Elixir",
-            "price": 225,
-            "size": "designer bottle",
-            "no": "No. 366"
-          }
-        },
-        "rotator-6": {
-          "type": "rotator",
-          "settings": {
-            "name": "Inv**tus",
-            "price": 325,
-            "size": "designer bottle",
-            "no": "No. 228"
-          }
-        },
-        "rotator-7": {
-          "type": "rotator",
-          "settings": {
-            "name": "Black Op*um",
-            "price": 345,
-            "size": "designer bottle",
-            "no": "No. 132"
-          }
-        },
-        "rotator-8": {
-          "type": "rotator",
-          "settings": {
-            "name": "One Mil*ion",
-            "price": 430,
-            "size": "designer bottle",
-            "no": "No. 275"
-          }
-        },
-        "rotator-9": {
-          "type": "rotator",
-          "settings": {
-            "name": "Li*re",
-            "price": 285,
-            "size": "designer bottle",
-            "no": "No. 034"
-          }
-        },
-        "rotator-10": {
-          "type": "rotator",
-          "settings": {
-            "name": "Fucking Fab**ous",
-            "price": 345,
-            "size": "designer bottle",
-            "no": "No. 232"
-          }
-        },
-        "rotator-11": {
-          "type": "rotator",
-          "settings": {
-            "name": "La Vie Est Be*le",
-            "price": 345,
-            "size": "designer bottle",
-            "no": "No. 101"
-          }
-        },
-        "rotator-12": {
-          "type": "rotator",
-          "settings": {
-            "name": "Al*en",
-            "price": 245,
-            "size": "designer bottle",
-            "no": "No. 004"
-          }
-        },
-        "rotator-13": {
-          "type": "rotator",
-          "settings": {
-            "name": "Le M*le",
-            "price": 355,
-            "size": "designer bottle",
-            "no": "No. 247"
-          }
-        },
-        "rotator-14": {
-          "type": "rotator",
-          "settings": {
-            "name": "Sca*dal",
-            "price": 345,
-            "size": "designer bottle",
-            "no": "No. 192"
-          }
-        },
-        "rotator-15": {
-          "type": "rotator",
-          "settings": {
-            "name": "J'a*ore",
-            "price": 235,
-            "size": "designer bottle",
-            "no": "No. 159"
-          }
-        },
-        "rotator-16": {
-          "type": "rotator",
-          "settings": {
-            "name": "Ar*ani Code",
-            "price": 260,
-            "size": "designer bottle",
-            "no": "No. 260"
-          }
-        },
-        "rotator-17": {
-          "type": "rotator",
-          "settings": {
-            "name": "Hyp**tic Poison",
-            "price": 345,
-            "size": "designer bottle",
-            "no": "No. 145"
-          }
-        },
-        "rotator-18": {
-          "type": "rotator",
-          "settings": {
-            "name": "Good Girl Ve*vet",
-            "price": 225,
-            "size": "designer bottle",
-            "no": "No. 461"
-          }
-        },
-        "rotator-19": {
-          "type": "rotator",
-          "settings": {
-            "name": "Ac*ua Di Gio",
-            "price": 285,
-            "size": "designer bottle",
-            "no": "No. 221"
-          }
         }
       },
       "block_order": [
         "item-1",
         "item-2",
         "item-3",
-        "item-4",
-        "rotator-5",
-        "rotator-6",
-        "rotator-7",
-        "rotator-8",
-        "rotator-9",
-        "rotator-10",
-        "rotator-11",
-        "rotator-12",
-        "rotator-13",
-        "rotator-14",
-        "rotator-15",
-        "rotator-16",
-        "rotator-17",
-        "rotator-18",
-        "rotator-19"
+        "item-4"
       ],
       "settings": {
         "rating_text": "Von über 10.000 Duftliebhabern empfohlen, Bewertung 4,7/5",
-        "prefix": "Spare",
-        "middle": "mit Magic Perfume",
-        "suffix": "statt",
-        "our_price": 10,
+        "prefix": "6 Lieblingsdüfte.",
+        "middle": "Dein Set.",
+        "suffix": "60.00 €.",
         "pill": "Wähle aus {count} Düften nach Designer-Vorbild",
         "button_label": "Spare 50% mit der Duft-Garderobe",
         "button_url": "#mp-picker",
-        "alt_text": "Unsicher beim Online-Kauf von Parfüm?",
-        "alt_link_text": "Hier klicken",
-        "alt_url": "#mp-collections",
+        "alt_text": "",
+        "alt_link_text": "So funktioniert die Rückgabe",
+        "alt_url": "https://magicperfume.co/policies/refund-policy",
         "micro": "60 Tage Geld-zurück-Garantie.",
         "image_url": "https://magicperfume.co/cdn/shop/files/magic_header_mobile_1.jpg?v=1772469543",
         "image_alt": "Sechs 50-ml-Flaschen von Magic Perfume in einer Reihe"
@@ -379,15 +228,24 @@
     "band": {
       "type": "mp-lp-band",
       "blocks": {
+        "item_VfQ74g": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "tag",
+            "text": "Only {per_eur} euro per bottle"
+          }
+        },
         "item-1": {
           "type": "item",
           "settings": {
             "icon": "tag",
-            "text": "Nur {per_eur} Euro pro Flasche"
+            "text": "{per_eur} je gewähltem Duft"
           }
         },
         "item-2": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "icon": "clock",
             "text": "Bis zu 12 Stunden"
@@ -395,6 +253,7 @@
         },
         "item-3": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "icon": "shield",
             "text": "60 Tage Geld-zurück-Garantie"
@@ -402,6 +261,7 @@
         }
       },
       "block_order": [
+        "item_VfQ74g",
         "item-1",
         "item-2",
         "item-3"
@@ -482,8 +342,8 @@
       ],
       "settings": {
         "background": "cream",
-        "heading": "Sieh, was andere sagen, bevor du es selbst riechst",
-        "sub": "Unsere Kunden bestellen in den ersten 90 Tagen im Schnitt 2,8-mal nach!"
+        "heading": "Erfahrungen mit Magic Perfume",
+        "sub": ""
       }
     },
     "problem": {
@@ -492,22 +352,22 @@
         "item-1": {
           "type": "item",
           "settings": {
-            "title": "Schicker Flakon und hübsche Verpackung",
-            "text": "Farbiges Glas, ein schwerer Verschluss, Folienprägung auf dem Deckel. Nichts davon riechst du."
+            "title": "Flakon & Verpackung:",
+            "text": "Ein aufwendig gestalteter Flakon und eine besondere Verpackung sind Teil dessen, was du bezahlst."
           }
         },
         "item-2": {
           "type": "item",
           "settings": {
-            "title": "Der Laden in der teuren Einkaufsstraße",
-            "text": "Miete an der besten Ecke der Stadt, dazu das Gesicht aus einer Kampagne, das du schon hundertmal gesehen hast."
+            "title": "Geschäfte & Beratung:",
+            "text": "Ladenmiete, Einrichtung und Beratung verursachen Kosten, die den Verkauf mitfinanzieren."
           }
         },
         "item-3": {
           "type": "item",
           "settings": {
-            "title": "Die Werbung, die du längst gesehen hast",
-            "text": "Kinospots, Plakatwände, Influencer-Deals. Die hast du bezahlt, bevor du überhaupt gesprüht hast."
+            "title": "Werbung & Markenauftritt:",
+            "text": "Auch große Kampagnen und prominente Werbegesichter werden über den Verkauf mitfinanziert."
           }
         }
       },
@@ -518,9 +378,9 @@
       ],
       "settings": {
         "background": "white",
-        "heading": "Wofür du bei einem Designerparfüm wirklich bezahlst",
-        "sub": "Das Parfüm selbst ist der günstigste Teil davon.",
-        "diff": "Nimm diese drei Dinge vom Preisschild. Übrig bleibt der Duft. Und nur den berechnen wir dir.",
+        "heading": "Was steckt im Preis eines Parfüms? Du bezahlst nicht nur den Duft.",
+        "sub": "Auch Verpackung, Vertrieb und Werbung können den Preis mitbestimmen.",
+        "diff": "Dein Duft. Dein Budget. Ein hoher Preis allein sagt noch nicht, ob ein Duft zu dir passt. Bei Magic wählst du sechs Düfte à 50 ml für 60,00 € – also 10,00 € pro Duft.",
         "cta_button": "Spar den Aufschlag. Behalt den Duft.",
         "cta_url": "#mp-picker",
         "cta_micro": "60 Tage Geld-zurück-Garantie.",
@@ -616,19 +476,19 @@
         "paragraph-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Tut sie nicht. Die Haltbarkeit kommt von der Konzentration des Parfümöls.<br>Mehr ist aber nicht automatisch besser.</p>"
+            "text": ""
           }
         },
         "paragraph-2": {
           "type": "paragraph",
           "settings": {
-            "text": "<p><strong>Was Designermarken und andere Duftzwilling-Marken verkaufen, ist meistens Eau de Toilette.</strong> Das heißt 5 bis 15% Parfümöl und jede Menge Alkohol. Eine Stunde riecht es großartig, dann verabschiedet es sich leise.</p>"
+            "text": ""
           }
         },
         "paragraph-3": {
           "type": "paragraph",
           "settings": {
-            "text": "<p><strong>Jede Flasche von Magic Perfume ist ein Eau de Parfum mit 21% Parfümöl.</strong> Auf diesem Niveau setzt sich der Duft auf deiner Haut fest, statt von ihr wegzufliegen.</p>"
+            "text": ""
           }
         },
         "paragraph-4": {
@@ -640,7 +500,7 @@
         "paragraph-5": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Daher kommen die 8 bis 12 Stunden, und auf dem Hemd hält es sogar noch länger.</p>"
+            "text": "<p><br/>Anwendungshinweise findest du auf der jeweiligen Produktseite.<br/><br/></p>"
           }
         },
         "paragraph-6": {
@@ -654,7 +514,7 @@
           "settings": {
             "icon": "drop",
             "title": "21% Parfümöl",
-            "text": "Eau-de-Parfum-Stärke und bis zu 12 Stunden Haltbarkeit in jeder einzelnen Flasche."
+            "text": "Duftdetails ansehen"
           }
         },
         "pillar-8": {
@@ -662,7 +522,7 @@
           "settings": {
             "icon": "globe",
             "title": "Hergestellt in einem EU-Dufthaus",
-            "text": "Für unerreichte Ähnlichkeit. Du glaubst es nicht? Dafür gibt es unsere 60 Tage Geld-zurück-Garantie."
+            "text": "So funktioniert die Rückgabe"
           }
         },
         "pillar-9": {
@@ -687,7 +547,7 @@
       ],
       "settings": {
         "background": "cream",
-        "heading": "Warum das meiste Parfüm schon vormittags aufgibt",
+        "heading": "Dein Duft im Alltag",
         "sub": "Der häufigste Irrtum ist, dass die Haltbarkeit eines Parfüms vom pH-Wert der Haut abhängt.",
         "tag_big": "21%",
         "tag_small": "Parfümöl",
