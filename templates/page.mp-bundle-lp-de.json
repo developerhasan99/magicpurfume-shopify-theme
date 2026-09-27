@@ -741,42 +741,48 @@
           "type": "tile",
           "settings": {
             "title": "Unerreichte Ähnlichkeit",
-            "text": "Bestätigt von über 10.000 zufriedenen Duftliebhabern."
+            "text": "Bestätigt von über 10.000 zufriedenen Duftliebhabern.",
+            "link_url": ""
           }
         },
         "tile-2": {
           "type": "tile",
           "settings": {
             "title": "Bis zu 12 Stunden Tragezeit",
-            "text": "Dank 21% Parfümöl in jeder Flasche."
+            "text": "Dank 21% Parfümöl in jeder Flasche.",
+            "link_url": ""
           }
         },
         "tile-3": {
           "type": "tile",
           "settings": {
             "title": "{count} Düfte verfügbar",
-            "text": "Entdecke die verfügbaren Düfte im Set."
+            "text": "Entdecke die verfügbaren Düfte im Set.",
+            "link_url": ""
           }
         },
         "tile-4": {
           "type": "tile",
           "settings": {
             "title": "Vegan und tierversuchsfrei",
-            "text": "Keine tierischen Inhaltsstoffe, keine Tierversuche."
+            "text": "Keine tierischen Inhaltsstoffe, keine Tierversuche.",
+            "link_url": ""
           }
         },
         "tile-5": {
           "type": "tile",
           "settings": {
             "title": "Hergestellt in Europa",
-            "text": "Nach EU-Standards produziert. Keine Phthalate, Parabene oder andere schädliche Chemikalien."
+            "text": "Nach EU-Standards produziert. Keine Phthalate, Parabene oder andere schädliche Chemikalien.",
+            "link_url": ""
           }
         },
         "tile-6": {
           "type": "tile",
           "settings": {
             "title": "60 Tage Geld-zurück-Garantie",
-            "text": "Rückgabe und Erstattung: Bedingungen ansehen"
+            "text": "Bedingungen ansehen",
+            "link_url": "https://magicperfume.co/policies/refund-policy"
           }
         },
         "card-7": {
@@ -821,7 +827,7 @@
         "sub": "",
         "center_image": "shopify://shop_images/mp-hero-mobile-burodufte.png",
         "center_alt": "Eine einzelne 50-ml-Flasche von Magic Perfume",
-        "trust_heading": "Drei Dinge, die wir dir schriftlich geben",
+        "trust_heading": "Lieferung & Rückgabe",
         "trust_sub": "Bei keinem davon Spielchen im Kleingedruckten.",
         "cta_pill": "Spare bis zu €2.000 mit Magic Perfume",
         "cta_button": "Duft-Garderobe mit 50% Rabatt sichern",
@@ -837,13 +843,13 @@
           "settings": {
             "key": "gourmand",
             "label": "Gourmand",
-            "how": "Riecht nach Dessert. Vanille, Karamell, Kakao und Kaffee, warm und süß. <strong>Am besten abends und in den kalten Monaten.</strong>",
+            "how": "&nbsp;Gourmand: Riecht nach Dessert. Entdecke Duftnoten wie Vanille, Karamell, Kakao oder Kaffee.&nbsp;",
             "image_url": "",
             "image_asset": "mp-lp-family-gourmand.jpg",
             "alt": "Zimtschnecken auf einem Holzbrett",
             "bg": "#F6E7D8",
             "ink": "#8B5A2B",
-            "button": "Aus diesen wählen"
+            "button": "Gourmand-Düfte ansehen"
           }
         },
         "family-2": {
@@ -851,13 +857,13 @@
           "settings": {
             "key": "floral",
             "label": "Blumig",
-            "how": "Gebaut auf Blüten. Rose, Jasmin und Iris, von leicht und klar bis satt und betörend. <strong>Der klassische feminine Duft.</strong>",
+            "how": "&nbsp;Blumig: Duftnoten wie Rose, Jasmin oder Iris – von leicht und frisch bis intensiv.&nbsp;",
             "image_url": "",
             "image_asset": "mp-lp-family-floral.jpg",
             "alt": "Weiße Jasminblüten",
             "bg": "#F9E4EC",
             "ink": "#B4436C",
-            "button": "Aus diesen wählen"
+            "button": "Gourmand-Düfte ansehen"
           }
         },
         "family-3": {
@@ -865,13 +871,13 @@
           "settings": {
             "key": "fresh",
             "label": "Frisch",
-            "how": "Zitrus, Meeresluft und grüne Blätter. Klar, leicht und einfach zu tragen. <strong>Gemacht für den Tag, den Sommer und das Büro.</strong>",
+            "how": "&nbsp;Frisch: Klar und leicht. Entdecke zitrische, grüne oder aquatische Duftnoten.&nbsp;",
             "image_url": "",
             "image_asset": "mp-lp-family-fresh.jpg",
             "alt": "Limettenscheiben, die ins Wasser fallen",
             "bg": "#E1F2E9",
             "ink": "#1F7A5C",
-            "button": "Aus diesen wählen"
+            "button": "Gourmand-Düfte ansehen"
           }
         },
         "family-4": {
@@ -879,13 +885,13 @@
           "settings": {
             "key": "woody",
             "label": "Holzig",
-            "how": "Sandelholz, Zeder und Vetiver. Trocken, ruhig und erwachsen, liegt nah an der Haut. <strong>Passt Damen und Herren gleichermaßen.</strong>",
+            "how": "&nbsp;Holzig: Von trocken bis warm. Entdecke Duftnoten wie Sandelholz, Zeder oder Vetiver.&nbsp;",
             "image_url": "",
             "image_asset": "mp-lp-family-woody.jpg",
             "alt": "Warme Holzmaserung",
             "bg": "#EDE6DA",
             "ink": "#6A4B2F",
-            "button": "Aus diesen wählen"
+            "button": "Gourmand-Düfte ansehen"
           }
         },
         "family-5": {
@@ -893,13 +899,13 @@
           "settings": {
             "key": "amber",
             "label": "Warm & würzig",
-            "how": "Amber, Harze, Zimt und Pfeffer. Tief, warm und langanhaltend, füllt einen ganzen Raum. <strong>Fürs Ausgehen und den Winter.</strong>",
+            "how": "&nbsp;Warm & würzig: Warm, würzig und ausdrucksstark. Entdecke Duftnoten wie Amber, Harze, Zimt oder Pfeffer.&nbsp;",
             "image_url": "",
             "image_asset": "mp-lp-family-amber.jpg",
             "alt": "Zimtstangen und Sternanis",
             "bg": "#FBE6D3",
             "ink": "#C0561E",
-            "button": "Aus diesen wählen"
+            "button": "Gourmand-Düfte ansehen"
           }
         },
         "family-6": {
@@ -907,13 +913,13 @@
           "settings": {
             "key": "fruity",
             "label": "Fruchtig",
-            "how": "Startet mit Frucht: Pfirsich, Kirsche, Beeren oder Birne auf süßer oder blumiger Basis. <strong>Saftig und verspielt, geliebt ab dem ersten Sprühstoß.</strong>",
+            "how": "&nbsp;Fruchtig: Saftig und verspielt. Entdecke Duftnoten wie Pfirsich, Kirsche, Beeren oder Birne.&nbsp;",
             "image_url": "",
             "image_asset": "mp-lp-family-fruity.jpg",
             "alt": "Reife Pfirsiche",
             "bg": "#FCE4E1",
             "ink": "#C43D3D",
-            "button": "Aus diesen wählen"
+            "button": "Gourmand-Düfte ansehen"
           }
         }
       },
@@ -927,15 +933,15 @@
       ],
       "settings": {
         "background": "white",
-        "heading": "Finde zuerst deine Duftfamilie",
+        "heading": "Welche Duftrichtung magst du? Wähle eine Duftrichtung, um passende Düfte anzuzeigen.",
         "sub": "Du weißt nicht genau, was du magst? Fang damit an, wie ein Duft riecht. Tipp auf eine Familie und die Auswahl unten zeigt nur diese Flaschen.",
         "gender_group_label": "Düfte zeigen für",
         "gender_all": "Alle",
         "gender_women": "Damen",
         "gender_men": "Herren",
         "gender_unisex": "Unisex",
-        "note": "Die meisten Düfte liegen in zwei Familien, ein paar Flaschen triffst du also zweimal. Jede Flasche ist 50 ml Eau de Parfum. Sechs für Damen, sechs für Herren oder gemischt, der Preis bleibt {price}.",
-        "cta_pill": "97% unserer Kunden sagen, Magic Perfume ist identisch.",
+        "note": "Ein Duft kann zu mehreren Duftrichtungen gehören. Jeder Flakon enthält 50 ml Eau de Parfum.  Kombiniere Damen-, Herren- und Unisexdüfte frei. Dein 6er-Set kostet   {price}.",
+        "cta_pill": "6 Düfte auswählen",
         "cta_button": "Bestes Angebot deines Lebens sichern",
         "cta_url": "#mp-picker",
         "cta_micro": "60 Tage Geld-zurück-Garantie."
@@ -945,9 +951,9 @@
       "type": "mp-lp-offer",
       "settings": {
         "background": "cream2",
-        "eyebrow": "Einmaliges Neukundenangebot",
+        "eyebrow": "6 Düfte deiner Wahl für 54,00 €",
         "heading": "Sechs Flaschen für {was} {price}, solange das läuft",
-        "sub": "{was}, wenn du sie einzeln kaufst. {price} als Box. Das sind {per} pro Flasche, und du wählst alle sechs selbst. Dazu als Bonus 1 Mystik Parfum 50 ml und Gratisversand.",
+        "sub": "6 x 50 ml für {price}. Du wählst alle sechs Düfte selbst. Dazu: 1 Überraschungsduft (50 ml) gratis. Diesen Duft wählen wir für dich aus.",
         "timer_label": "Angebot endet in",
         "label_hours": "Std",
         "label_minutes": "Min",
@@ -1037,7 +1043,7 @@
       ],
       "settings": {
         "background": "cream",
-        "heading": "Die Rechnung auf dem Bon",
+        "heading": "Dein Preisvorteil im Vergleich",
         "sub": "Sechs Designer, sechs von uns einzeln, oder die Box.",
         "designer_total": "€955",
         "chip_per": "{per} pro Flasche",
