@@ -1,4 +1,4 @@
-{%- comment -%} MP LP · Story + pillars. Body copy and pillars are blocks; icons render via a case, same pattern as mp-lp-band. Middle pillar becomes a link when exactly 3 pillars exist and its link_url is set. {%- endcomment -%}
+{%- comment -%} MP LP · Story + pillars. Body copy and pillars are blocks; icons render via a case, same pattern as mp-lp-band. Any pillar with link_url filled renders as a link. {%- endcomment -%}
 {%- liquid
   assign bg_class = ''
   if section.settings.background == 'cream'
@@ -36,9 +36,9 @@
       <ul class="mp-pillars" style="text-align:left">
         {%- for block in pillar_blocks -%}
         {%- liquid
-          assign is_middle_of_three = false
-          if pillar_blocks.size == 3 and forloop.index == 2 and block.settings.link_url != blank
-            assign is_middle_of_three = true
+          assign has_link = false
+          if block.settings.link_url != blank
+            assign has_link = true
           endif
           assign icon_svg = ''
           case block.settings.icon
@@ -51,7 +51,7 @@
           endcase
         -%}
         <li {{ block.shopify_attributes }}>
-          {%- if is_middle_of_three -%}
+          {%- if has_link -%}
           <a class="mp-pillars__link" href="{{ block.settings.link_url }}" style="display:flex;align-items:flex-start;gap:inherit;color:inherit;text-decoration:none">
             <span class="mp-pillars__ico">{{ icon_svg }}</span>
             <div class="mp-pillars__txt"><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p></div>
@@ -105,7 +105,7 @@
       { "type": "select", "id": "icon", "label": "Icon", "options": [ { "value": "drop", "label": "Drop" }, { "value": "globe", "label": "Globe" }, { "value": "leaf", "label": "Leaf" } ], "default": "drop" },
       { "type": "text", "id": "title", "label": "Title", "default": "21% fragrance oil" },
       { "type": "text", "id": "text", "label": "Text", "default": "Eau de Parfum strength and up to 12 hours of longevity in every single bottle." },
-      { "type": "url", "id": "link_url", "label": "Link URL (only used if this is the middle pillar of exactly 3)", "info": "Only applied when there are exactly 3 pillars and this one is second. Leave empty for no link." }
+      { "type": "url", "id": "link_url", "label": "Link URL", "info": "If filled, this pillar becomes a clickable link. Leave empty for no link." }
     ] }
   ],
   "presets": [{
