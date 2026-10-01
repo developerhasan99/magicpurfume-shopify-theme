@@ -149,7 +149,7 @@
   <div id="{{ section.id }}">
     <a href="{{ section.settings.link }}" class="no-underline block">
 
-      {% if section.settings.top_banner_text != blank %}
+      {% if section.settings.enable_top_bar and section.settings.top_banner_text != blank %}
         <div
           class="py-3"
           style="background-color: {{ section.settings.primary_color }};"
@@ -356,6 +356,12 @@
   "settings": [
     {
       "type": "checkbox",
+      "id": "enable_top_bar",
+      "label": "Enable Top Bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
       "id": "enable_timer",
       "label": "Enable Countdown Timer",
       "default": true
@@ -376,7 +382,7 @@
       "type": "text",
       "id": "top_banner_text",
       "label": "Top Banner Text",
-      "info": "Leaving this field will disable the banner."
+      "info": "Leaving this field empty will also disable the top banner."
     },
     {
       "type": "text",
