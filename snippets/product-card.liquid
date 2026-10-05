@@ -121,7 +121,12 @@
       price_class: 'price--large'
     -%}
   </div>
-
+  {% unless product.tags contains 'Bundle_Price_Show' %}
+    <div class="mt-2 flex flex-col gap-1 font-bold tracking-normal text-[#c8202f] {% if collection.template_suffix == 'action-modal' %}text-sm{% else %}text-base{% endif %} leading-tight">
+      <p class="m-0 !text-[#c8202f]">Kaufe 1, erhalte 1 GRATIS!</p>
+      <p class="m-0 !text-[#c8202f]">Kaufe 2, erhalte 3 GRATIS!</p>
+    </div>
+  {% endunless %}
   <div class="mt-auto">
     <a 
       class="hover:bg-[#17803d] bg-[#146b32] text-white uppercase text-sm font-semibold tracking-[2px] py-3 px-4 rounded-lg no-underline w-full text-center block" 
