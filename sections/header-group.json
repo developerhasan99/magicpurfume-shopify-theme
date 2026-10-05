@@ -72,13 +72,15 @@
       ],
       "name": "Offer Timebar",
       "settings": {
+        "enable_top_bar": false,
         "enable_timer": true,
+        "enable_badges": true,
         "primary_color": "#000000",
         "secondary_color": "#f2f2f2",
         "top_banner_text": "BEGRENZTE STÜCKZAHL",
-        "prepend_text": "Oktoberfest-Angebot!",
+        "prepend_text": "1 kaufen, 1 gratis dazu!",
         "countdown_date": "",
-        "append_text": "30 % AUF ALLES",
+        "append_text": "Jetzt einkaufen",
         "link": "shopify://collections/bestseller-singles"
       }
     },
