@@ -70,16 +70,15 @@
         "payment_icon_Qjr7YN",
         "payment_icon_rTMrrJ"
       ],
-      "disabled": true,
       "name": "Offer Timebar",
       "settings": {
-        "enable_top_bar": false,
+        "enable_top_bar": true,
         "enable_timer": true,
         "enable_badges": true,
         "primary_color": "#000000",
         "secondary_color": "#f2f2f2",
         "top_banner_text": "BEGRENZTE STÜCKZAHL",
-        "prepend_text": "1 kaufen, 1 gratis dazu!",
+        "prepend_text": "3 kaufen, 1 gratis dazu!",
         "countdown_date": "",
         "append_text": "Jetzt einkaufen",
         "link": "shopify://collections/bestseller-singles"
