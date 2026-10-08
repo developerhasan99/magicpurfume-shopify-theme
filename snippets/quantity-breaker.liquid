@@ -90,7 +90,8 @@
     </div>
   {% endif %}
 
-  {% comment %} Quantity breaker tiers {% endcomment %}
+  {% comment %} Quantity breaker tiers — hidden for 30 ml (single bottle only) {% endcomment %}
+  <div x-show="!$store.qb.singleOnly">
   <h2 class="m-0 text-base md:text-lg font-bold !mt-5">Mehr kaufen, mehr sparen:</h2>
   <p class="m-0 mb-3 text-sm text-gray-500">Mehr kaufen &amp; sparen – oder einzeln bestellen.</p>
 
@@ -206,6 +207,7 @@
       </div>
     </template>
   </div>
+  </div>
 
   {% comment %} Add to cart form — real product-form component; bundle items are
      submitted as items[0..n] hidden inputs kept in sync by Alpine {% endcomment %}
@@ -272,6 +274,20 @@
             <span class="current-price">{{ selected_variant.price | money }}</span>
           </div>
         </div> {% endcomment %}
+
+        {% comment %} 30 ml single bottle — price on the button, same look as reactive-atc {% endcomment %}
+        <div
+          x-show="$store.qb.singleOnly"
+          x-cloak
+          class="ml-2 pl-2 border-0 border-l flex items-center border-solid border-gray-200/20">
+          <div class="inline-block text-lg bg-[#0c5224] px-3 rounded" role="status">
+            <span
+              x-show="$store.qb.unit.compare > $store.qb.unit.price"
+              class="line-through text-white/50 text-base"
+              x-text="$store.qb.money($store.qb.unit.compare)"></span>
+            <span x-text="$store.qb.money($store.qb.unit.price)"></span>
+          </div>
+        </div>
 
         {%- render 'loading-spinner' -%}
       </button>
@@ -497,8 +513,11 @@
           this.availableProducts.unshift(this.mainProduct);
         }
         this.picks = [this.withVariant(this.mainProduct)];
-        this.selectTier(this.selectedTierKey);
+        this.selectTier(this.singleOnly ? 't1' : this.selectedTierKey);
       },
+
+      {% comment %} 30 ml is sold as a single bottle of this product only {% endcomment %}
+      get singleOnly() { return this.selectedSize.indexOf('30') !== -1; },
 
       get selectedTier() {
         var key = this.selectedTierKey;
@@ -526,6 +545,7 @@
 
       selectSize: function (key) {
         if (!this.variants[key]) return;
+        var wasSingle = this.singleOnly;
         this.selectedSize = key;
         this.selectedVariantId = this.variants[key].id;
         var input = document.getElementById('product-variant-id');
@@ -533,6 +553,12 @@
         this.picks.forEach(function (p) {
           if (p && p.variants[key]) p.variant = p.variants[key];
         });
+        if (this.singleOnly) {
+          this.picks = [this.withVariant(this.mainProduct)];
+          this.selectTier('t1');
+        } else if (wasSingle) {
+          this.selectTier('t3');
+        }
       },
 
       selectTier: function (key) {
