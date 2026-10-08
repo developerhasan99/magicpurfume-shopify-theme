@@ -22,7 +22,7 @@
       height="{{ product.images.first.height }}"
       width="{{ product.images.first.width }}"
     >
-    {% unless product.tags contains 'Bundle_Price_Show' %}
+    {% comment %} {% unless product.tags contains 'Bundle_Price_Show' %}
       <div class="card__promo-marquee absolute left-0 right-0 bottom-0 bg-[#137c44] text-white" aria-label="30 % Rabatt">
         <div class="card__promo-marquee-rail">
           <div class="card__promo-marquee-group">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-    {% endunless %}
+    {% endunless %} {% endcomment %}
   </a>
 
   {% comment %} <div class="flex items-center flex-wrap gap-x-2 gap-y-1 mt-3">
@@ -121,12 +121,12 @@
       price_class: 'price--large'
     -%}
   </div>
-  {% unless product.tags contains 'Bundle_Price_Show' %}
+  {% comment %} {% unless product.tags contains 'Bundle_Price_Show' %}
     <div class="mb-3 flex flex-col gap-1 font-bold tracking-normal text-[#c8202f] {% if collection.template_suffix == 'action-modal' %}text-sm{% else %}text-base{% endif %} leading-tight">
       <p class="m-0 !text-[#c8202f]">Kaufe 1, erhalte 1 GRATIS!</p>
       <p class="m-0 !text-[#c8202f]">Kaufe 2, erhalte 3 GRATIS!</p>
     </div>
-  {% endunless %}
+  {% endunless %} {% endcomment %}
   <div class="mt-auto">
     <a 
       class="hover:bg-[#17803d] bg-[#146b32] text-white uppercase text-sm font-semibold tracking-[2px] py-3 px-4 rounded-lg no-underline w-full text-center block" 
